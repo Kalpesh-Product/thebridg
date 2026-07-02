@@ -53,7 +53,8 @@ export default function Home() {
           </div>
 
           <p className="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed">
-            Building A Home For Early Founders Who Are Overlooked, Underfunded, Self Driven, And Determined To Build What
+            <span className="block pb-1">Building A Home For Early Founders Who Are Overlooked,</span>
+            <span className="block">Underfunded, Self Driven, And Determined To Build What</span>
           </p>
           <p className="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed mt-2">
             <span className="relative inline-block px-3 py-1">

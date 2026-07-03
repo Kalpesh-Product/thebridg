@@ -29,10 +29,10 @@ export default function CompaniesList() {
         </div>
 
         {/* Table Header */}
-        <div className="grid grid-cols-3 gap-4 pb-4 border-b-2 border-[#1A1A1A]">
+        <div className="grid grid-cols-3 gap-4 pb-4 border-b-2 border-[#1A1A1A] text-center">
           <span className="text-sm font-semibold uppercase tracking-wider">COMPANY NAME v</span>
           <span className="text-sm font-semibold uppercase tracking-wider">SHORT DESCRIPTION v</span>
-          <span className="text-sm font-semibold uppercase tracking-wider text-right">CURRENT STAGE v</span>
+          <span className="text-sm font-semibold uppercase tracking-wider">CURRENT STAGE v</span>
         </div>
 
         {/* Table Rows */}
@@ -40,11 +40,11 @@ export default function CompaniesList() {
           <Link
             to={`/company/${company.slug}`}
             key={company.slug}
-            className="grid grid-cols-3 gap-4 py-8 border-b-2 border-[#1A1A1A] items-center hover:bg-black/5 transition-colors -mx-4 px-4"
+            className="grid grid-cols-3 gap-4 py-8 border-b-2 border-[#1A1A1A] items-center text-center hover:bg-black/5 transition-colors -mx-4 px-4"
           >
             <span className="text-2xl font-normal uppercase">{company.name}</span>
             <span className="text-base text-[#1A1A1A]">{company.desc}</span>
-            <span className="text-sm font-medium uppercase tracking-wider text-right">EARLY</span>
+            <span className="text-sm font-medium uppercase tracking-wider">EARLY</span>
           </Link>
         ))}
       </div>

@@ -24,7 +24,7 @@ export default function Team() {
                 className="aspect-[1/1.3] flex flex-col justify-end p-6 relative"
                 style={{ backgroundColor: member.color }}
               >
-                <h3 className="text-3xl font-bold text-[#FFEB3B]">
+                <h3 className="text-2xl font-bold text-[#FFEB3B] uppercase tracking-wide">
                   {member.name}
                 </h3>
                 <p className="text-sm mt-2 text-white/90 leading-relaxed max-w-[450px]">

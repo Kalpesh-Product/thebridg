@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
 
@@ -6,6 +6,10 @@ type Step = 1 | 2 | 3 | 4;
 
 export default function Connect() {
   const [step, setStep] = useState<Step>(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [step]);
   const [formData, setFormData] = useState({
     supportRequired: '',
     fullName: '',
@@ -61,15 +65,15 @@ export default function Connect() {
 
   return (
     <PageLayout>
-      <div className="pt-8 pb-16 max-w-4xl mx-auto">
+      <div className={step === 2 ? "pt-8 pb-16 max-w-2xl mx-auto" : "pt-3 pb-4 max-w-2xl mx-auto"}>
         {/* Step Indicator */}
         {step < 4 && (
-          <div className="flex items-center justify-center gap-4 md:gap-8 mb-12">
+          <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
             {[1, 2, 3].map((s) => (
-              <div key={s} className="flex items-center gap-2 md:gap-4">
+              <div key={s} className="flex items-center gap-1 md:gap-2">
                 <div className="flex flex-col items-center">
                   <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-semibold transition-colors duration-300 ${
+                    className={`w-8 h-8 text-xs rounded-full flex items-center justify-center font-semibold transition-colors duration-300 ${
                       s < step
                         ? 'bg-[#4CAF50] text-white'
                         : s === step
@@ -79,13 +83,13 @@ export default function Connect() {
                   >
                     {s}
                   </div>
-                  <span className="text-xs mt-2 uppercase tracking-wider text-center hidden sm:block">
+                  <span className="text-xs mt-0.5 uppercase tracking-wider text-center hidden sm:block">
                     {s === 1 ? 'PERSONAL INFO' : s === 2 ? 'COMPANY INFO' : 'SUBMISSION'}
                   </span>
                 </div>
                 {s < 3 && (
                   <div
-                    className={`w-16 md:w-32 h-1 transition-colors duration-300 ${
+                    className={`w-5 md:w-10 h-1 transition-colors duration-300 ${
                       s < step ? 'bg-[#4CAF50]' : 'bg-[#BDBDBD]'
                     }`}
                   />
@@ -98,11 +102,11 @@ export default function Connect() {
         {/* Step 1: Personal Info */}
         {step === 1 && (
           <div>
-            <h2 className="text-2xl font-normal text-center mb-12 tracking-wide">
-              LETS &nbsp; SET UP YOUR ACCOUNT!
+            <h2 className="text-2xl font-normal text-center pt-4 mb-5 tracking-wide">
+              LET&apos;S SET UP YOUR ACCOUNT!
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1">
               <select
                 className="form-input-underline bg-transparent cursor-pointer"
                 value={formData.supportRequired}
@@ -151,8 +155,8 @@ export default function Connect() {
               />
             </div>
 
-            <div className="flex justify-center mt-12">
-              <button onClick={() => setStep(2)} className="yellow-btn">Next</button>
+            <div className="flex justify-center pt-8">
+              <button onClick={() => setStep(2)} className="yellow-btn !px-7 !py-2 text-sm">Next</button>
             </div>
           </div>
         )}
@@ -268,33 +272,34 @@ export default function Connect() {
             </div>
 
             <div className="flex justify-between">
-              <button onClick={() => setStep(1)} className="yellow-btn">Back</button>
-              <button onClick={() => setStep(3)} className="yellow-btn">Next</button>
+              <button onClick={() => setStep(1)} className="yellow-btn !px-7 !py-2 text-sm">Back</button>
+              <button onClick={() => setStep(3)} className="yellow-btn !px-7 !py-2 text-sm">Next</button>
             </div>
           </div>
         )}
 
         {/* Step 3: Confirm */}
         {step === 3 && (
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">You&apos;re almost done!</h2>
-            <p className="text-xl mb-16">Please confirm your submission.</p>
+          <div className="text-center pt-4">
+            <h2 className="text-2xl font-bold mb-3">You&apos;re almost done!</h2>
+            <p className="text-sm mb-6">Please confirm your submission.</p>
 
             <div className="flex justify-between">
-              <button onClick={() => setStep(2)} className="yellow-btn">Back</button>
-              <button onClick={() => setStep(4)} className="yellow-btn">Confirm</button>
+              <button onClick={() => setStep(2)} className="yellow-btn !px-7 !py-2 text-sm">Back</button>
+              <button onClick={() => setStep(4)} className="yellow-btn !px-7 !py-2 text-sm">Confirm</button>
             </div>
           </div>
         )}
 
         {/* Step 4: Success */}
         {step === 4 && (
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-8">You&apos;re All Set!</h2>
-            <p className="text-base leading-relaxed mb-6 max-w-2xl mx-auto">
+          <div className="pt-4">
+            <h2 className="text-2xl font-bold mb-5 text-center">You&apos;re All Set!</h2>
+
+            <p className="text-sm font-medium leading-relaxed mb-4 max-w-2xl">
               An email has been sent to your email address containing all the further process for the activation. Our team will reach out to you shortly for more details and will guide you further within 48 hours.
             </p>
-            <p className="text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-sm font-medium leading-relaxed mb-5 max-w-2xl">
               Please let us know if there is any more queries from your side, or you can contact us at : response@thebridg.com
             </p>
 
@@ -302,9 +307,9 @@ export default function Connect() {
               href="https://gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-base hover:opacity-70 transition-opacity mb-6"
+              className="inline-flex items-center gap-2 text-sm hover:opacity-70 transition-opacity mb-5"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24">
+              <svg width="22" height="22" viewBox="0 0 24 24">
                 <path fill="#EA4335" d="M12 13.5L2 7V17h20V7l-10 6.5z"/>
                 <path fill="#FBBC05" d="M22 7l-10 6.5L2 7h20z"/>
                 <path fill="#34A853" d="M12 13.5L22 7v10H2V7l10 6.5z"/>
@@ -314,13 +319,15 @@ export default function Connect() {
               <span className="underline">Open Gmail</span>
             </a>
 
-            <p className="text-sm text-[#666] mb-10">
+            <p className="text-sm mb-6">
               Did not receive an email? Please check your spam folder.
             </p>
 
-            <Link to="/">
-              <button className="yellow-btn">Go to Home</button>
-            </Link>
+            <div className="flex justify-center">
+              <Link to="/">
+                <button className="yellow-btn !px-7 !py-2 text-sm">Go to Home</button>
+              </Link>
+            </div>
           </div>
         )}
       </div>

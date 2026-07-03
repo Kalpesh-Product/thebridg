@@ -48,7 +48,7 @@ export default function TeamDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column - Bio */}
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-8" style={{ color: '#FFEB3B', textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
               {member.name}
             </h1>
 

@@ -1,6 +1,5 @@
 import { Link } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
-import YellowHighlight from '../components/shared/YellowHighlight';
 
 export default function Home() {
   return (

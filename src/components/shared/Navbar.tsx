@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full" style={{ backgroundColor: '#FFF0EB' }}>
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
         <Link to="/" className="text-3xl font-bold tracking-tight" style={{ color: '#1A1A1A' }}>
           BRIDG
         </Link>
@@ -42,7 +42,7 @@ export default function Navbar() {
         </div>
         <MobileMenu isActive={isActive} />
       </div>
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12">
         <div className="w-full h-0.5" style={{ backgroundColor: '#1A1A1A' }} />
       </div>
     </nav>

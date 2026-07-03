@@ -13,7 +13,7 @@ const companiesData: Record<string, {
     name: 'STUDOM',
     category: 'Education',
     color: '#8B6F5E',
-    description: 'Studom is a platform that helps students discover and compare universities in one place. It simplifies the search process by bringing together clear and structured information, allowing students to explore different options and understand what suits them best. By making information easy to access and compare, Studom helps students make more confident and informed decisions about their higher education journey.',
+    description: 'Studom is a platform that helps students discover, compare, and apply to universities in one place. It simplifies the search process by bringing together clear and structured information, allowing students to explore different options and understand what suits them best. By making information easy to access, compare, and apply through a single platform, Studom helps students make more confident and informed decisions about their higher education journey.',
     website: 'Studom.co',
     whyPartnered: 'We partnered with Studom because it brings everything students need into one place, something no other platform currently offers. Its unique, all in one approach makes discovering and comparing universities simpler, clearer, and more accessible.',
   },
@@ -21,49 +21,49 @@ const companiesData: Record<string, {
     name: 'UNISTYLE',
     category: 'Merchandise',
     color: '#7A7A7A',
-    description: 'UniStyle helps students represent their universities through curated merchandise. It offers a unique way for students to show pride in their educational institutions with quality products.',
+    description: 'UniStyle is a platform that brings official school uniforms and university merchandise into one place. It simplifies the buying process by offering authentic products through a single platform, making it easier for students, parents, alumni, and supporters to find what they need. By making official apparel more accessible, UniStyle helps institutions connect with their communities through products they can trust.',
     website: 'Unistyle.co',
-    whyPartnered: 'UniStyle taps into the powerful sense of identity and belonging that students feel toward their universities, creating a brand that resonates emotionally.',
+    whyPartnered: 'We partnered with UniStyle because it brings official school uniforms and university merchandise together on one platform, something that is often fragmented today. Its focused approach makes finding and purchasing authentic institutional apparel simpler, more convenient, and more accessible.',
   },
   'daily-daily': {
     name: 'DAILY DAILY',
     category: 'Subscription',
     color: '#7A7A7A',
-    description: 'Dialy Dialy delivers daily essentials through simple subscriptions. It takes the hassle out of remembering to buy everyday items.',
+    description: 'Daily Daily is a platform that helps people subscribe to and receive everyday essentials from local stores in one place. It simplifies the shopping process by bringing together daily needs through a convenient subscription model, making regular purchases easier to manage. By making everyday shopping more reliable and hassle free, Daily Daily helps people save time while ensuring they never run out of the products they use most.',
     website: 'Dailydaily.co',
-    whyPartnered: 'Daily Daily addresses a genuine pain point in urban living - the inconvenience of procuring daily essentials. Their subscription model creates predictable revenue.',
+    whyPartnered: 'We partnered with Daily Daily because it makes purchasing everyday essentials simpler through a single subscription platform, something that is often time consuming to manage. Its convenient approach makes recurring shopping easier, more reliable, and more accessible.',
   },
   stintern: {
     name: 'STINTERN',
     category: 'Education/HR',
     color: '#8B4A6B',
-    description: 'Stintern connects students with internships and real work opportunities. It bridges the gap between academic learning and professional experience.',
+    description: 'Stintern is a platform that helps students discover and apply for internships in one place. It simplifies the internship search process by bringing together opportunities from different companies, allowing students to explore roles that match their skills and career goals. By making internship opportunities easier to access and apply for, Stintern helps students gain valuable industry experience with greater confidence.',
     website: 'Stintern.co',
-    whyPartnered: 'Stintern solves the classic chicken-and-egg problem for students - needing experience to get experience. Their platform creates genuine pathways.',
+    whyPartnered: 'We partnered with Stintern because it bridges the gap between students and employers by making internship opportunities easier to discover and access. Its focused approach helps students gain practical experience while enabling companies to connect with emerging talent.',
   },
   flagit: {
     name: 'FLAGIT',
     category: 'Civic Tech',
     color: '#8B6F5E',
-    description: 'Flagit lets users report road violations by capturing and submitting them easily. It empowers citizens to contribute to road safety.',
+    description: 'Flagit is a platform that enables people to report road and traffic violations in a simple and responsible way. It allows users to submit photos of violations, which are verified before being forwarded to the relevant authorities for action. By making civic reporting more accessible and transparent, Flagit encourages safer roads while rewarding citizens for their genuine contributions.',
     website: 'Flagit.app',
-    whyPartnered: 'Flagit channels citizen frustration about road safety into actionable data. Their approach turns everyday citizens into agents of change.',
+    whyPartnered: 'We partnered with Flagit because it empowers citizens to play an active role in improving road safety through responsible reporting. Its community driven approach supports safer streets while encouraging greater public participation and accountability.',
   },
   datamatic: {
     name: 'DATAMATIC',
     category: 'Data/Analytics',
     color: '#8B4A6B',
-    description: 'Datamatic provides complete data and insights on companies in one place. It aggregates and analyzes business intelligence.',
+    description: 'Datamatic is a platform that helps businesses discover and access structured company information in one place. It simplifies the research process by bringing together reliable corporate data, allowing users to explore companies, industries, and key business insights with ease. By making business information easier to access and understand, Datamatic helps users make more informed decisions with greater confidence.',
     website: 'Datamatic.io',
-    whyPartnered: 'Datamatic addresses the fragmentation of business intelligence data. Their unified approach saves researchers and decision-makers countless hours.',
+    whyPartnered: 'We partnered with Datamatic because it makes business information easier to discover through one structured platform, something that is often difficult to access and organize. Its data driven approach makes researching companies simpler, clearer, and more accessible.',
   },
   allperspectives: {
     name: 'ALLPERSPECTIVES',
-    category: 'Media',
+    category: 'Relationships',
     color: '#7A7A7A',
-    description: 'All Perspective is a filmmaking company that creates stories from diverse perspectives. It champions underrepresented voices in cinema.',
+    description: 'Allperspectives is a platform that explores the different perspectives people experience in everyday relationships. It brings together stories and experiences from multiple points of view, helping people better understand the thoughts, emotions, and challenges of others. By presenting different sides of the same relationship, Allperspectives encourages empathy, meaningful conversations, and deeper human connections.',
     website: 'Allperspectives.com',
-    whyPartnered: 'All Perspectives brings much-needed diversity to storytelling. Their commitment to amplifying marginalized voices aligns with our mission.',
+    whyPartnered: 'We partnered with Allperspectives because it encourages people to see relationships through more than one perspective, something that is often overlooked. Its thoughtful approach promotes understanding, empathy, and more meaningful conversations across everyday life.',
   },
 };
 
@@ -77,11 +77,11 @@ export default function CompanyDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column - Info */}
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#FFEB3B', textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
               {company.name}
             </h1>
             <div className="relative inline-block mb-8">
-              <span className="text-lg font-medium">{company.category}</span>
+              <span className="text-lg font-bold">{company.category}</span>
               <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 80 4" fill="none" preserveAspectRatio="none">
                 <path d="M1 2 Q15 1 30 2 Q45 3 60 2 Q70 1 79 2" stroke="#FFEB3B" strokeWidth="3" strokeLinecap="round" />
               </svg>
@@ -93,7 +93,7 @@ export default function CompanyDetail() {
 
             <div className="flex items-center gap-6 mb-12">
               <a href="#" className="text-base font-medium" style={{ color: '#1A1A1A' }}>
-                <span className="underline" style={{ color: '#FFEB3B', textDecorationColor: '#FFEB3B' }}>{company.website}</span>
+                <span className="underline" style={{ color: '#1A73E8', textDecorationColor: '#1A73E8' }}>{company.website}</span>
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-[#1A1A1A] flex items-center justify-center hover:bg-[#1A1A1A] hover:text-white transition-colors">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -135,7 +135,7 @@ export default function CompanyDetail() {
                 <input type="text" placeholder="Country" className="form-input-underline" />
                 <input type="text" placeholder="City" className="form-input-underline" />
                 <select className="form-input-underline bg-transparent cursor-pointer">
-                  <option value="">Partnership type v</option>
+                  <option value="">Partnership type</option>
                   <option value="investment">Investment</option>
                   <option value="partnership">Partnership</option>
                   <option value="collaboration">Collaboration</option>

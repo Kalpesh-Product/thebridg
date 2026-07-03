@@ -2,13 +2,13 @@ import { Link } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
 
 const companies = [
-  { slug: 'studom', name: 'STUDOM', color: '#8B6F5E', desc: 'Studom helps students discover and choose the right universities.' },
-  { slug: 'unistyle', name: 'UNISTYLE', color: '#7A7A7A', desc: 'Unistyle helps students represent their universities through curated merchandise.' },
-  { slug: 'daily-daily', name: 'DAILY DAILY', color: '#7A7A7A', desc: 'Dialy Dialy delivers daily essentials through simple subscriptions.' },
-  { slug: 'stintern', name: 'STINTERN', color: '#8B4A6B', desc: 'Stintern connects students with internships and real work opportunities.' },
-  { slug: 'flagit', name: 'FLAGIT', color: '#8B6F5E', desc: 'Flagit lets users report road violations by capturing and submitting them easily.' },
-  { slug: 'datamatic', name: 'DATAMATIC', color: '#8B4A6B', desc: 'Datamatic provides complete data and insights on companies in one place' },
-  { slug: 'allperspectives', name: 'ALLPERSPECTIVES', color: '#7A7A7A', desc: 'All Perspective is a filmmaking company that creates stories from diverse perspectives.' },
+  { slug: 'studom', name: 'STUDOM', color: '#8B6F5E', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
+  { slug: 'unistyle', name: 'UNISTYLE', color: '#7A7A7A', desc: 'UniStyle brings official school uniforms and university merchandise into one place.' },
+  { slug: 'daily-daily', name: 'DAILY DAILY', color: '#7A7A7A', desc: 'Daily Daily helps people subscribe to and receive everyday essentials from local stores.' },
+  { slug: 'stintern', name: 'STINTERN', color: '#8B4A6B', desc: 'Stintern helps students discover and apply for internships in one place.' },
+  { slug: 'flagit', name: 'FLAGIT', color: '#8B6F5E', desc: 'Flagit lets people report road and traffic violations in a simple, responsible way.' },
+  { slug: 'datamatic', name: 'DATAMATIC', color: '#8B4A6B', desc: 'Datamatic helps businesses discover and access structured company information in one place.' },
+  { slug: 'allperspectives', name: 'ALLPERSPECTIVES', color: '#7A7A7A', desc: 'Allperspectives explores the different perspectives people experience in everyday relationships.' },
 ];
 
 export default function Companies() {
@@ -45,7 +45,7 @@ export default function Companies() {
                 <h3 className="text-2xl font-bold text-[#FFEB3B] uppercase tracking-wide">
                   {company.name}
                 </h3>
-                <p className="text-sm mt-2 text-white/90 leading-relaxed max-w-[280px]">
+                <p className="text-sm mt-2 text-white/90 leading-relaxed max-w-[420px]">
                   {company.desc}
                 </p>
               </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 export default function Footer() {
   return (
     <footer className="w-full mt-16" style={{ backgroundColor: '#FFF0EB' }}>
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12">
         <div className="w-full h-0.5" style={{ backgroundColor: '#1A1A1A' }} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10">
           {/* Column 1 - Logo */}

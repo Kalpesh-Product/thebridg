@@ -4,7 +4,7 @@ export default function YellowHighlight({ children, className = '' }: { children
       <span className="relative z-10">{children}</span>
       <svg
         className="absolute pointer-events-none"
-        style={{ top: '-28%', bottom: '-32%', left: '-8%', right: '-8%' }}
+        style={{ top: '-16%', bottom: '-20%', left: '-8%', right: '-8%' }}
         viewBox="0 0 200 100"
         fill="none"
         preserveAspectRatio="none"

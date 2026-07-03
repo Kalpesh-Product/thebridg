@@ -98,7 +98,7 @@ export default function Connect() {
         {/* Step 1: Personal Info */}
         {step === 1 && (
           <div>
-            <h2 className="text-2xl font-normal text-center mb-12 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
+            <h2 className="text-2xl font-normal text-center mb-12 tracking-wide">
               LETS &nbsp; SET UP YOUR ACCOUNT!
             </h2>
 

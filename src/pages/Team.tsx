@@ -27,7 +27,7 @@ export default function Team() {
                 <h3 className="text-3xl font-bold text-[#FFEB3B]">
                   {member.name}
                 </h3>
-                <p className="text-sm mt-2 text-white/90 leading-relaxed max-w-[300px]">
+                <p className="text-sm mt-2 text-white/90 leading-relaxed max-w-[450px]">
                   {member.desc}
                 </p>
               </div>

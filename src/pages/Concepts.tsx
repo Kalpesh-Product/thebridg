@@ -132,7 +132,7 @@ function OverlayConceptCard({ concept }: { concept: Concept }) {
           </p>
         </div>
 
-        <div className="self-end text-right">
+        <div className="self-end text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-wider mb-4" style={{ color: '#FFEB3B' }}>
             {concept.title}
           </h2>
@@ -185,13 +185,15 @@ function ConceptCard({ concept }: { concept: Concept }) {
           >
             {concept.quote}
           </p>
-          <h2
-            className="text-4xl md:text-5xl font-bold tracking-wider mb-4"
-            style={{ color: '#FFEB3B' }}
-          >
-            {concept.title}
-          </h2>
-          <ApplyOval textColor={concept.textColor} />
+          <div className="text-center">
+            <h2
+              className="text-4xl md:text-5xl font-bold tracking-wider mb-4"
+              style={{ color: '#FFEB3B' }}
+            >
+              {concept.title}
+            </h2>
+            <ApplyOval textColor={concept.textColor} />
+          </div>
         </div>
       </div>
     </div>

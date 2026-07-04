@@ -11,7 +11,7 @@ const positions = [
 export default function Careers() {
   return (
     <PageLayout>
-      <div className="pt-8 pb-16">
+      <div className="pt-8 pb-16 px-6 md:px-10">
         {/* Title */}
         <div className="mb-12">
           <h1 className="relative inline-block text-3xl md:text-4xl font-bold uppercase tracking-wider">

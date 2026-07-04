@@ -11,7 +11,7 @@ const teamMembers = [
 export default function Team() {
   return (
     <PageLayout>
-      <div className="pt-8 pb-16">
+      <div className="pt-8 pb-16 px-6 md:px-10">
         {/* Team Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map((member) => (

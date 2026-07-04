@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { useParams } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
+import LiquidSelect from '../components/shared/LiquidSelect';
 
 const companiesData: Record<string, {
   name: string;
@@ -70,14 +72,15 @@ const companiesData: Record<string, {
 export default function CompanyDetail() {
   const { slug } = useParams<{ slug: string }>();
   const company = companiesData[slug || ''] || companiesData['studom'];
+  const [partnershipType, setPartnershipType] = useState('');
 
   return (
     <PageLayout>
-      <div className="pt-8 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column - Info */}
+      <div className="pt-8 pb-16 px-6 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
+          {/* Row 1, Col 1 - Name/Description */}
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
               {company.name}
             </h1>
             <div className="relative inline-block mb-8">
@@ -91,7 +94,7 @@ export default function CompanyDetail() {
               {company.description}
             </p>
 
-            <div className="flex items-center gap-6 mb-12">
+            <div className="flex items-center gap-6">
               <a href="#" className="text-base font-medium" style={{ color: '#1A1A1A' }}>
                 <span className="underline" style={{ color: '#1A73E8', textDecorationColor: '#1A73E8' }}>{company.website}</span>
               </a>
@@ -106,41 +109,43 @@ export default function CompanyDetail() {
                 </svg>
               </a>
             </div>
-
-            <div>
-              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">WHY WE PARTNERED?</h3>
-              <p className="text-base leading-relaxed" style={{ color: '#1A1A1A' }}>
-                {company.whyPartnered}
-              </p>
-            </div>
           </div>
 
-          {/* Right Column - Card + Form */}
-          <div>
-            {/* Color Card */}
-            <div
-              className="w-full aspect-square rounded-lg mb-8"
-              style={{ backgroundColor: company.color }}
-            />
+          {/* Row 1, Col 2 - Color Card */}
+          <div
+            className="w-full rounded-lg"
+            style={{ backgroundColor: company.color }}
+          />
 
-            {/* Connect Form */}
-            <div className="border border-[#1A1A1A] rounded-lg p-6">
-              <h3 className="text-xl font-bold uppercase tracking-wider text-center mb-6">
-                CONNECT WITH {company.name}!
-              </h3>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                <input type="text" placeholder="Full Name" className="form-input-underline" />
-                <input type="email" placeholder="Email" className="form-input-underline" />
-                <input type="tel" placeholder="Phone Number" className="form-input-underline" />
-                <input type="text" placeholder="Country" className="form-input-underline" />
-                <input type="text" placeholder="City" className="form-input-underline" />
-                <select className="form-input-underline bg-transparent cursor-pointer">
-                  <option value="">Partnership type</option>
-                  <option value="investment">Investment</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="collaboration">Collaboration</option>
-                </select>
-              </div>
+          {/* Row 2, Col 1 - Why We Partnered */}
+          <div className="pt-12">
+            <h3 className="text-xl font-bold uppercase tracking-wider mb-4">WHY WE PARTNERED?</h3>
+            <p className="text-base leading-relaxed" style={{ color: '#1A1A1A' }}>
+              {company.whyPartnered}
+            </p>
+          </div>
+
+          {/* Row 2, Col 2 - Connect Form */}
+          <div className="border border-[#1A1A1A] rounded-lg p-6 mt-12">
+            <h3 className="text-xl font-bold uppercase tracking-wider text-center mb-6">
+              CONNECT WITH {company.name}!
+            </h3>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+              <input type="text" placeholder="Full Name" className="form-input-underline" />
+              <input type="email" placeholder="Email" className="form-input-underline" />
+              <input type="tel" placeholder="Phone Number" className="form-input-underline" />
+              <input type="text" placeholder="Country" className="form-input-underline" />
+              <input type="text" placeholder="City" className="form-input-underline" />
+              <LiquidSelect
+                placeholder="Partnership type"
+                value={partnershipType}
+                onChange={setPartnershipType}
+                options={[
+                  { value: 'investment', label: 'Investment' },
+                  { value: 'partnership', label: 'Partnership' },
+                  { value: 'collaboration', label: 'Collaboration' },
+                ]}
+              />
             </div>
           </div>
         </div>

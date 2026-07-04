@@ -21,10 +21,10 @@ export default function Team() {
               className="group block rounded-lg overflow-hidden transition-transform duration-300 hover:-translate-y-1"
             >
               <div
-                className="aspect-[1/1.3] flex flex-col justify-end p-6 relative"
+                className="aspect-[1/1.1] flex flex-col justify-end p-6 relative"
                 style={{ backgroundColor: member.color }}
               >
-                <h3 className="text-2xl font-bold text-[#FFEB3B] uppercase tracking-wide">
+                <h3 className="text-xl font-bold text-[#FFEB3B] uppercase tracking-wide">
                   {member.name}
                 </h3>
                 <p className="text-sm mt-2 text-white/90 leading-relaxed max-w-[450px]">

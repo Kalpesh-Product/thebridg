@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10 min-h-[calc(100vh-5.375rem)]">
+      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10 min-h-[calc(100vh-3.375rem)]">
         {/* Bridge Drawing */}
         <img src="/assets/BRIDG.png" alt="Bridge sketch" className="w-auto max-w-[750px] max-h-[22vh] mb-6" />
 
@@ -37,12 +37,12 @@ export default function Home() {
           style={{ backgroundColor: '#2D2D2D' }}
         >
           <h2
-            className="text-4xl md:text-5xl font-light tracking-[8px] text-white uppercase"
+            className="text-2xl md:text-3xl font-light tracking-[8px] text-white uppercase"
           >
             MISSION
           </h2>
           <h2
-            className="text-4xl md:text-5xl font-light tracking-[8px] text-white uppercase mt-2"
+            className="text-2xl md:text-3xl font-light tracking-[8px] text-white uppercase mt-2"
           >
             STATEMENT
           </h2>

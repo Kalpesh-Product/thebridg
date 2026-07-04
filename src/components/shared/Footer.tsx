@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10">
           {/* Column 1 - Logo */}
           <div>
-            <Link to="/" className="text-3xl font-bold tracking-tight" style={{ color: '#1A1A1A' }}>
+            <Link to="/" className="text-xl font-bold tracking-tight" style={{ color: '#1A1A1A' }}>
               BRIDG
             </Link>
           </div>

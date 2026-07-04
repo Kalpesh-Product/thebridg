@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
+import { SiGmail } from 'react-icons/si';
 import PageLayout from '../components/shared/PageLayout';
+import LiquidSelect from '../components/shared/LiquidSelect';
 
 type Step = 1 | 2 | 3;
 
@@ -64,22 +66,22 @@ export default function Invest() {
         {/* Step 1: Personal Info */}
         {step === 1 && (
           <div>
-            <h2 className="text-2xl font-normal text-center pt-4 mb-5 tracking-wide">
+            <h2 className="text-xl font-normal text-center pt-4 mb-5 tracking-wide">
               LET&apos;S SET UP YOUR ACCOUNT!
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1">
-              <select
-                className="form-input-underline bg-transparent cursor-pointer"
+              <LiquidSelect
+                placeholder="Type of Investment/Interest"
                 value={formData.investmentType}
-                onChange={(e) => updateField('investmentType', e.target.value)}
-              >
-                <option value="">Type of Investment/Interest</option>
-                <option value="pre-incubation">Pre-Incubation</option>
-                <option value="incubation">Incubation</option>
-                <option value="vc-funding">VC Funding</option>
-                <option value="strategic-investment">Strategic Investment</option>
-              </select>
+                onChange={(v) => updateField('investmentType', v)}
+                options={[
+                  { value: 'pre-incubation', label: 'Pre-Incubation' },
+                  { value: 'incubation', label: 'Incubation' },
+                  { value: 'vc-funding', label: 'VC Funding' },
+                  { value: 'strategic-investment', label: 'Strategic Investment' },
+                ]}
+              />
               <input
                 type="text"
                 placeholder="Full Name"
@@ -126,7 +128,7 @@ export default function Invest() {
         {/* Step 2: Investment Details */}
         {step === 2 && (
           <div>
-            <h2 className="text-2xl font-normal text-center mb-12 tracking-wide uppercase">
+            <h2 className="text-xl font-normal text-center mb-12 tracking-wide uppercase">
               TELL US ABOUT YOUR INTEREST
             </h2>
 
@@ -165,7 +167,7 @@ export default function Invest() {
         {/* Step 3: Success */}
         {step === 3 && (
           <div className="pt-4">
-            <h2 className="text-2xl font-bold mb-5 text-center">You&apos;re All Set!</h2>
+            <h2 className="text-xl font-bold mb-5 text-center">You&apos;re All Set!</h2>
 
             <p className="text-sm font-medium leading-relaxed mb-4 max-w-2xl">
               A confirmation email has been sent to your inbox. Our team will review your investment preferences and contact you with relevant opportunities, company introductions, and next steps.
@@ -180,13 +182,7 @@ export default function Invest() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm hover:opacity-70 transition-opacity mb-5"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24">
-                <path fill="#EA4335" d="M12 13.5L2 7V17h20V7l-10 6.5z"/>
-                <path fill="#FBBC05" d="M22 7l-10 6.5L2 7h20z"/>
-                <path fill="#34A853" d="M12 13.5L22 7v10H2V7l10 6.5z"/>
-                <path fill="#C5221F" d="M2 7l10 6.5L22 7H2z"/>
-                <path fill="#4285F4" d="M2 7l10 6.5L22 7v-.5c0-.8-.7-1.5-1.5-1.5H3.5C2.7 5 2 5.7 2 6.5V7z"/>
-              </svg>
+              <SiGmail size={20} color="#EA4335" />
               <span className="underline">Open Gmail</span>
             </a>
 

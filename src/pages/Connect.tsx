@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
+import { SiGmail } from 'react-icons/si';
 import PageLayout from '../components/shared/PageLayout';
+import LiquidSelect from '../components/shared/LiquidSelect';
 
 type Step = 1 | 2 | 3 | 4;
 
@@ -102,22 +104,22 @@ export default function Connect() {
         {/* Step 1: Personal Info */}
         {step === 1 && (
           <div>
-            <h2 className="text-2xl font-normal text-center pt-4 mb-5 tracking-wide">
+            <h2 className="text-xl font-normal text-center pt-4 mb-5 tracking-wide">
               LET&apos;S SET UP YOUR ACCOUNT!
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1">
-              <select
-                className="form-input-underline bg-transparent cursor-pointer"
+              <LiquidSelect
+                placeholder="Support Required"
                 value={formData.supportRequired}
-                onChange={(e) => updateField('supportRequired', e.target.value)}
-              >
-                <option value="">Support Required</option>
-                <option value="pre-incubation">Pre-Incubation</option>
-                <option value="incubation">Incubation</option>
-                <option value="vc-funding">VC Funding</option>
-                <option value="strategic-investment">Strategic Investment</option>
-              </select>
+                onChange={(v) => updateField('supportRequired', v)}
+                options={[
+                  { value: 'pre-incubation', label: 'Pre-Incubation' },
+                  { value: 'incubation', label: 'Incubation' },
+                  { value: 'vc-funding', label: 'VC Funding' },
+                  { value: 'strategic-investment', label: 'Strategic Investment' },
+                ]}
+              />
               <input
                 type="text"
                 placeholder="Full Name"
@@ -164,7 +166,7 @@ export default function Connect() {
         {/* Step 2: Company Info */}
         {step === 2 && (
           <div>
-            <h2 className="text-2xl font-normal text-center mb-12 tracking-wide uppercase">
+            <h2 className="text-xl font-normal text-center mb-12 tracking-wide uppercase">
               ADD YOUR COMPANY DETAILS
             </h2>
 
@@ -172,25 +174,37 @@ export default function Connect() {
               <input type="text" placeholder="Company Name" className="form-input-underline" value={formData.companyName} onChange={(e) => updateField('companyName', e.target.value)} />
               <input type="text" placeholder="Industry" className="form-input-underline" value={formData.industry} onChange={(e) => updateField('industry', e.target.value)} />
               <input type="text" placeholder="Company Size" className="form-input-underline" value={formData.companySize} onChange={(e) => updateField('companySize', e.target.value)} />
-              <select className="form-input-underline bg-transparent cursor-pointer" value={formData.companyCountry} onChange={(e) => updateField('companyCountry', e.target.value)}>
-                <option value="">Company Country</option>
-                <option value="india">India</option>
-                <option value="usa">USA</option>
-                <option value="uk">UK</option>
-                <option value="uae">UAE</option>
-              </select>
-              <select className="form-input-underline bg-transparent cursor-pointer" value={formData.companyState} onChange={(e) => updateField('companyState', e.target.value)}>
-                <option value="">Company State</option>
-                <option value="goa">Goa</option>
-                <option value="maharashtra">Maharashtra</option>
-                <option value="karnataka">Karnataka</option>
-              </select>
-              <select className="form-input-underline bg-transparent cursor-pointer" value={formData.companyCity} onChange={(e) => updateField('companyCity', e.target.value)}>
-                <option value="">Company City</option>
-                <option value="panjim">Panjim</option>
-                <option value="mumbai">Mumbai</option>
-                <option value="bangalore">Bangalore</option>
-              </select>
+              <LiquidSelect
+                placeholder="Company Country"
+                value={formData.companyCountry}
+                onChange={(v) => updateField('companyCountry', v)}
+                options={[
+                  { value: 'india', label: 'India' },
+                  { value: 'usa', label: 'USA' },
+                  { value: 'uk', label: 'UK' },
+                  { value: 'uae', label: 'UAE' },
+                ]}
+              />
+              <LiquidSelect
+                placeholder="Company State"
+                value={formData.companyState}
+                onChange={(v) => updateField('companyState', v)}
+                options={[
+                  { value: 'goa', label: 'Goa' },
+                  { value: 'maharashtra', label: 'Maharashtra' },
+                  { value: 'karnataka', label: 'Karnataka' },
+                ]}
+              />
+              <LiquidSelect
+                placeholder="Company City"
+                value={formData.companyCity}
+                onChange={(v) => updateField('companyCity', v)}
+                options={[
+                  { value: 'panjim', label: 'Panjim' },
+                  { value: 'mumbai', label: 'Mumbai' },
+                  { value: 'bangalore', label: 'Bangalore' },
+                ]}
+              />
             </div>
 
             {/* About Company */}
@@ -281,7 +295,7 @@ export default function Connect() {
         {/* Step 3: Confirm */}
         {step === 3 && (
           <div className="text-center pt-4">
-            <h2 className="text-2xl font-bold mb-3">You&apos;re almost done!</h2>
+            <h2 className="text-xl font-bold mb-3">You&apos;re almost done!</h2>
             <p className="text-sm mb-6">Please confirm your submission.</p>
 
             <div className="flex justify-between">
@@ -294,7 +308,7 @@ export default function Connect() {
         {/* Step 4: Success */}
         {step === 4 && (
           <div className="pt-4">
-            <h2 className="text-2xl font-bold mb-5 text-center">You&apos;re All Set!</h2>
+            <h2 className="text-xl font-bold mb-5 text-center">You&apos;re All Set!</h2>
 
             <p className="text-sm font-medium leading-relaxed mb-4 max-w-2xl">
               An email has been sent to your email address containing all the further process for the activation. Our team will reach out to you shortly for more details and will guide you further within 48 hours.
@@ -309,13 +323,7 @@ export default function Connect() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm hover:opacity-70 transition-opacity mb-5"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24">
-                <path fill="#EA4335" d="M12 13.5L2 7V17h20V7l-10 6.5z"/>
-                <path fill="#FBBC05" d="M22 7l-10 6.5L2 7h20z"/>
-                <path fill="#34A853" d="M12 13.5L22 7v10H2V7l10 6.5z"/>
-                <path fill="#C5221F" d="M2 7l10 6.5L22 7H2z"/>
-                <path fill="#4285F4" d="M2 7l10 6.5L22 7v-.5c0-.8-.7-1.5-1.5-1.5H3.5C2.7 5 2 5.7 2 6.5V7z"/>
-              </svg>
+              <SiGmail size={20} color="#EA4335" />
               <span className="underline">Open Gmail</span>
             </a>
 

@@ -44,11 +44,11 @@ export default function TeamDetail() {
 
   return (
     <PageLayout>
-      <div className="pt-8 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column - Bio */}
+      <div className="pt-8 pb-16 px-6 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
+          {/* Row 1, Col 1 - Name/Bio */}
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
               {member.name}
             </h1>
 
@@ -56,7 +56,7 @@ export default function TeamDetail() {
               {member.bio}
             </p>
 
-            <div className="flex items-center gap-4 mb-12">
+            <div className="flex items-center gap-4">
               {member.socials.map((social) => (
                 <a key={social.type} href={social.url} className="w-10 h-10 rounded-full border border-[#1A1A1A] flex items-center justify-center hover:bg-[#1A1A1A] hover:text-white transition-colors">
                   {social.type === 'linkedin' ? (
@@ -71,34 +71,34 @@ export default function TeamDetail() {
                 </a>
               ))}
             </div>
-
-            <div>
-              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">PERSONAL HOBBIES!</h3>
-              <p className="text-base leading-relaxed" style={{ color: '#1A1A1A' }}>
-                {member.hobbies}
-              </p>
-            </div>
           </div>
 
-          {/* Right Column - Card + Form */}
-          <div>
-            <div
-              className="w-full aspect-[4/3] rounded-lg mb-8"
-              style={{ backgroundColor: member.color }}
-            />
+          {/* Row 1, Col 2 - Color Card */}
+          <div
+            className="w-full rounded-lg"
+            style={{ backgroundColor: member.color }}
+          />
 
-            <div className="border border-[#1A1A1A] rounded-lg p-6">
-              <h3 className="text-xl font-bold uppercase tracking-wider text-center mb-6">
-                CONNECT WITH {member.name}!
-              </h3>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                <input type="text" placeholder="Full Name" className="form-input-underline" />
-                <input type="email" placeholder="Email" className="form-input-underline" />
-                <input type="tel" placeholder="Phone Number" className="form-input-underline" />
-                <input type="text" placeholder="Country" className="form-input-underline" />
-                <input type="text" placeholder="City" className="form-input-underline" />
-                <input type="text" placeholder="A Brief Message" className="form-input-underline" />
-              </div>
+          {/* Row 2, Col 1 - Personal Hobbies */}
+          <div className="pt-12">
+            <h3 className="text-xl font-bold uppercase tracking-wider mb-4">PERSONAL HOBBIES!</h3>
+            <p className="text-base leading-relaxed" style={{ color: '#1A1A1A' }}>
+              {member.hobbies}
+            </p>
+          </div>
+
+          {/* Row 2, Col 2 - Connect Form */}
+          <div className="border border-[#1A1A1A] rounded-lg p-6 mt-12">
+            <h3 className="text-xl font-bold uppercase tracking-wider text-center mb-6">
+              CONNECT WITH {member.name}!
+            </h3>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+              <input type="text" placeholder="Full Name" className="form-input-underline" />
+              <input type="email" placeholder="Email" className="form-input-underline" />
+              <input type="tel" placeholder="Phone Number" className="form-input-underline" />
+              <input type="text" placeholder="Country" className="form-input-underline" />
+              <input type="text" placeholder="City" className="form-input-underline" />
+              <input type="text" placeholder="A Brief Message" className="form-input-underline" />
             </div>
           </div>
         </div>

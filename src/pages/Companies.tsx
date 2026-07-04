@@ -42,7 +42,7 @@ export default function Companies() {
                 className="aspect-[1/1.1] flex flex-col justify-end p-6 relative"
                 style={{ backgroundColor: company.color }}
               >
-                <h3 className="text-2xl font-bold text-[#FFEB3B] uppercase tracking-wide">
+                <h3 className="text-xl font-bold text-[#FFEB3B] uppercase tracking-wide">
                   {company.name}
                 </h3>
                 <p className="text-sm mt-2 text-white/90 leading-relaxed max-w-[420px]">

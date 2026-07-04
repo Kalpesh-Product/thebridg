@@ -66,7 +66,7 @@ export default function Concepts() {
   return (
     <PageLayout>
       <div className="pt-4 pb-8">
-        <h1 className="text-5xl md:text-6xl font-light text-center mb-8 tracking-wider">CONCEPTS</h1>
+        <h1 className="text-3xl md:text-4xl font-light text-center mb-8 tracking-wider">CONCEPTS</h1>
 
         <div className="space-y-0 -mx-6 md:-mx-12">
           {concepts.map((concept, index) => (
@@ -124,7 +124,7 @@ function OverlayConceptCard({ concept }: { concept: Concept }) {
 
       <div className="relative flex flex-col justify-between p-8 md:p-12" style={{ minHeight: '100vh' }}>
         <div className="max-w-xs">
-          <h3 className="text-2xl md:text-3xl font-bold tracking-wider mb-4" style={{ color: concept.textColor }}>
+          <h3 className="text-xl md:text-2xl font-bold tracking-wider mb-4" style={{ color: concept.textColor }}>
             {concept.name}
           </h3>
           <p className="text-lg md:text-xl leading-relaxed italic" style={{ color: concept.textColor, opacity: 0.9 }}>
@@ -133,7 +133,7 @@ function OverlayConceptCard({ concept }: { concept: Concept }) {
         </div>
 
         <div className="self-end text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-wider mb-4" style={{ color: '#FFEB3B' }}>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-wider mb-4" style={{ color: '#FFEB3B' }}>
             {concept.title}
           </h2>
           <ApplyOval textColor={concept.textColor} />
@@ -174,7 +174,7 @@ function ConceptCard({ concept }: { concept: Concept }) {
           }`}
         >
           <h3
-            className="text-2xl md:text-3xl font-bold tracking-wider mb-4"
+            className="text-xl md:text-2xl font-bold tracking-wider mb-4"
             style={{ color: concept.textColor }}
           >
             {concept.name}
@@ -187,7 +187,7 @@ function ConceptCard({ concept }: { concept: Concept }) {
           </p>
           <div className="text-center">
             <h2
-              className="text-4xl md:text-5xl font-bold tracking-wider mb-4"
+              className="text-2xl md:text-3xl font-bold tracking-wider mb-4"
               style={{ color: '#FFEB3B' }}
             >
               {concept.title}

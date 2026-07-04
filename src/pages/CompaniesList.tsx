@@ -14,7 +14,7 @@ const companies = [
 export default function CompaniesList() {
   return (
     <PageLayout>
-      <div className="pt-8 pb-16">
+      <div className="pt-8 pb-16 px-6 md:px-10">
         {/* View Toggle */}
         <div className="flex gap-8 mb-8">
           <Link to="/companies" className="text-sm font-medium uppercase tracking-wider text-[#666] hover:text-[#1A1A1A] transition-colors">
@@ -30,9 +30,9 @@ export default function CompaniesList() {
 
         {/* Table Header */}
         <div className="grid grid-cols-3 gap-4 pb-4 border-b-2 border-[#1A1A1A] text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider">COMPANY NAME v</span>
-          <span className="text-sm font-semibold uppercase tracking-wider">SHORT DESCRIPTION v</span>
-          <span className="text-sm font-semibold uppercase tracking-wider">CURRENT STAGE v</span>
+          <span className="text-sm font-semibold uppercase tracking-wider">COMPANY NAME</span>
+          <span className="text-sm font-semibold uppercase tracking-wider">SHORT DESCRIPTION</span>
+          <span className="text-sm font-semibold uppercase tracking-wider">CURRENT STAGE</span>
         </div>
 
         {/* Table Rows */}
@@ -42,8 +42,8 @@ export default function CompaniesList() {
             key={company.slug}
             className="grid grid-cols-3 gap-4 py-8 border-b-2 border-[#1A1A1A] items-center text-center hover:bg-black/5 transition-colors -mx-4 px-4"
           >
-            <span className="text-2xl font-normal uppercase">{company.name}</span>
-            <span className="text-base text-[#1A1A1A]">{company.desc}</span>
+            <span className="text-base font-normal uppercase">{company.name}</span>
+            <span className="text-xs text-[#1A1A1A]">{company.desc}</span>
             <span className="text-sm font-medium uppercase tracking-wider">EARLY</span>
           </Link>
         ))}

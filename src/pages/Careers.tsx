@@ -14,9 +14,9 @@ export default function Careers() {
       <div className="pt-8 pb-16 px-6 md:px-10">
         {/* Title */}
         <div className="mb-12">
-          <h1 className="relative inline-block text-3xl md:text-4xl font-bold uppercase tracking-wider">
+          <h1 className="relative inline-block text-2xl md:text-3xl font-bold uppercase tracking-wider">
             OPEN POSITIONS
-            <svg className="absolute -bottom-2 left-0 w-[110%] -left-[5%]" style={{ height: '8px' }} viewBox="0 0 200 8" fill="none" preserveAspectRatio="none">
+            <svg className="absolute -bottom-2 left-0 w-[110%] -left-[5%]" style={{ height: '6px' }} viewBox="0 0 200 8" fill="none" preserveAspectRatio="none">
               <path d="M2 4 Q30 2 60 4 Q90 6 120 3 Q150 1 180 4 Q190 5 198 4" stroke="#FFEB3B" strokeWidth="5" strokeLinecap="round" fill="none" />
             </svg>
           </h1>
@@ -29,7 +29,7 @@ export default function Careers() {
               key={index}
               className="flex items-center justify-between py-6 border-b-2 border-[#1A1A1A] hover:bg-black/5 transition-colors -mx-4 px-4"
             >
-              <span className="text-lg md:text-xl font-normal">{position}</span>
+              <span className="text-base font-normal">{position}</span>
               <button className="outline-btn">APPLY</button>
             </div>
           ))}

@@ -37,25 +37,25 @@ export default function Home() {
           style={{ backgroundColor: '#2D2D2D' }}
         >
           <h2
-            className="text-2xl md:text-3xl font-light tracking-[8px] text-white uppercase"
+            className="text-4xl md:text-6xl font-light tracking-[8px] text-white uppercase"
           >
             MISSION
           </h2>
           <h2
-            className="text-2xl md:text-3xl font-light tracking-[8px] text-white uppercase mt-2"
+            className="text-4xl md:text-6xl font-light tracking-[8px] text-white uppercase mt-2"
           >
             STATEMENT
           </h2>
 
           <div className="flex justify-center my-10">
-            <div className="w-24 h-0.5 bg-white" />
+            <div className="w-[85%] max-w-3xl h-0.5 bg-white" />
           </div>
 
-          <p className="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed">
             <span className="block pb-1">Building A Home For Early Founders Who Are Overlooked,</span>
             <span className="block">Underfunded, Self Driven, And Determined To Build What</span>
           </p>
-          <p className="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed mt-2">
+          <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed mt-2">
             {/* <YellowHighlight className="font-semibold">OTHERS WON&apos;T.</YellowHighlight> */}
             <span className="relative inline-block px-3 py-1">
               <span className="relative z-10 font-semibold">OTHERS WON&apos;T.</span>

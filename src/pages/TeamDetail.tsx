@@ -100,6 +100,9 @@ export default function TeamDetail() {
               <input type="text" placeholder="City" className="form-input-underline" />
               <input type="text" placeholder="A Brief Message" className="form-input-underline" />
             </div>
+            <div className="flex justify-center pt-8">
+              <button className="yellow-btn !px-7 !py-2 text-sm">Submit</button>
+            </div>
           </div>
         </div>
       </div>

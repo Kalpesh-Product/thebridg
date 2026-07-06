@@ -147,6 +147,9 @@ export default function CompanyDetail() {
                 ]}
               />
             </div>
+            <div className="flex justify-center pt-8">
+              <button className="yellow-btn !px-7 !py-2 text-sm">Submit</button>
+            </div>
           </div>
         </div>
       </div>

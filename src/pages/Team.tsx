@@ -13,7 +13,7 @@ export default function Team() {
     <PageLayout>
       <div className="pt-8 pb-16 px-6 md:px-10">
         {/* Team Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {teamMembers.map((member) => (
             <Link
               to={`/team/${member.slug}`}

@@ -29,13 +29,13 @@ export default function Invest() {
 
   return (
     <PageLayout>
-      <div className={step === 2 ? "pt-8 pb-16 max-w-2xl mx-auto" : "pt-3 pb-4 max-w-2xl mx-auto"}>
+      <div className={step === 2 ? "pt-3 pb-16 max-w-2xl mx-auto" : "pt-3 pb-4 max-w-2xl mx-auto"}>
         {/* Step Indicator */}
         {step < 3 && (
-          <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
+          <div className="flex items-start justify-center gap-1 md:gap-2 mb-2">
             {[1, 2].map((s) => (
-              <div key={s} className="flex items-center gap-1 md:gap-2">
-                <div className="flex flex-col items-center">
+              <div key={s} className="flex items-start gap-1 md:gap-2">
+                <div className="flex flex-col items-center sm:w-28">
                   <div
                     className={`w-8 h-8 text-xs rounded-full flex items-center justify-center font-semibold transition-colors duration-300 ${
                       s < step
@@ -47,13 +47,13 @@ export default function Invest() {
                   >
                     {s}
                   </div>
-                  <span className="text-xs mt-0.5 uppercase tracking-wider text-center hidden sm:block">
+                  <span className="text-xs mt-0.5 uppercase text-center whitespace-nowrap hidden sm:block">
                     {s === 1 ? 'PERSONAL INFO' : 'INVESTMENT DETAILS'}
                   </span>
                 </div>
                 {s < 2 && (
                   <div
-                    className={`w-5 md:w-10 h-1 transition-colors duration-300 ${
+                    className={`w-10 md:w-20 h-0.5 mt-[0.9375rem] transition-colors duration-300 ${
                       s < step ? 'bg-[#4CAF50]' : 'bg-[#BDBDBD]'
                     }`}
                   />
@@ -70,7 +70,7 @@ export default function Invest() {
               LET&apos;S SET UP YOUR ACCOUNT!
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               <LiquidSelect
                 placeholder="Type of Investment/Interest"
                 value={formData.investmentType}

@@ -29,7 +29,7 @@ export default function Companies() {
         </div>
 
         {/* Company Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {companies.map((company, index) => (
             <Link
               to={`/company/${company.slug}`}

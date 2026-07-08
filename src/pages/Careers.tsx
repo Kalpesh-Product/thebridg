@@ -23,7 +23,7 @@ export default function Careers() {
         </div>
 
         {/* Positions List */}
-        <div>
+        <div className="space-y-4">
           {positions.map((position, index) => (
             <div
               key={index}

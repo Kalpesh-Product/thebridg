@@ -3,9 +3,9 @@ import PageLayout from '../components/shared/PageLayout';
 
 export default function Home() {
   return (
-    <PageLayout>
+    <PageLayout noFooterGap>
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10 min-h-[calc(100vh-5.375rem)]">
+      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10">
         {/* Bridge Drawing */}
         <img src="/assets/BRIDG.png" alt="Bridge sketch" className="w-auto max-w-[750px] max-h-[22vh] mb-6" />
 
@@ -30,7 +30,7 @@ export default function Home() {
       {/* Mission Statement Section */}
       <section className="relative -mx-6 md:-mx-12">
         <div
-          className="w-full h-[420px] md:h-[560px] px-6 md:px-12 text-center flex flex-col items-center justify-center"
+          className="w-full min-h-[420px] md:min-h-[560px] py-16 px-6 md:px-12 text-center flex flex-col items-center justify-center"
           style={{ backgroundColor: '#2D2D2D' }}
         >
           <h2

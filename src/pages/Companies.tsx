@@ -13,8 +13,8 @@ const companies = [
 
 export default function Companies() {
   return (
-    <PageLayout>
-      <div className="pt-8 pb-16 px-6 md:px-10">
+    <PageLayout noFooterGap>
+      <div className="pt-8 pb-0 px-6 md:px-10">
         {/* View Toggle */}
         <div className="flex gap-8 mb-8">
           <span className="text-sm font-medium uppercase tracking-wider relative">

@@ -39,8 +39,8 @@ const concepts: Concept[] = [
 
 export default function Concepts() {
   return (
-    <PageLayout>
-      <div className="pt-4 pb-8">
+    <PageLayout noFooterGap>
+      <div className="pt-4 pb-0">
         <h1 className="text-3xl md:text-4xl font-light text-center mb-8 tracking-wider">CONCEPTS</h1>
 
         <div className="space-y-0 -mx-6 md:-mx-12">
@@ -48,8 +48,6 @@ export default function Concepts() {
             <ScreenshotConceptCard key={index} concept={concept} />
           ))}
         </div>
-
-        <div className="border-t-2 border-[#BBBBBB] mt-8" />
       </div>
     </PageLayout>
   );

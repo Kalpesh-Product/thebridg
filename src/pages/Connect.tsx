@@ -70,7 +70,7 @@ export default function Connect() {
       <div className={step === 2 ? "pt-3 pb-16 max-w-5xl mx-auto" : "pt-3 pb-4 max-w-5xl mx-auto"}>
         {/* Step Indicator */}
         {(
-          <div className="flex items-start justify-center gap-2 md:gap-3 mb-4 md:mb-8">
+          <div className="flex items-start justify-center gap-2 md:gap-3 pt-6 md:pt-8 mb-4 md:mb-8">
             {[1, 2, 3].map((s) => (
               <div key={s} className="flex items-start gap-2 md:gap-3">
                 <div className="flex flex-col items-center sm:w-32">
@@ -79,7 +79,7 @@ export default function Connect() {
                       s < step
                         ? 'bg-[#00A868] text-white'
                         : s === step
-                        ? 'bg-[#4ADE80] text-[#1A1A1A]'
+                        ? 'bg-[#FFDE58] text-[#1A1A1A]'
                         : 'bg-[#BDBDBD] text-[#1A1A1A]'
                     }`}
                   >

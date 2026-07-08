@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
 
-export default function Footer() {
+export default function Footer({ noGap }: { noGap?: boolean }) {
   return (
-    <footer className="w-full mt-16" style={{ backgroundColor: '#FFFFFF' }}>
+    <footer className={noGap ? 'w-full' : 'w-full mt-16'} style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-[1800px] mx-auto px-6 md:px-12">
-        <div className="w-full h-0.5" style={{ backgroundColor: '#1A1A1A' }} />
+        {!noGap && <div className="w-full h-0.5" style={{ backgroundColor: '#1A1A1A' }} />}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 py-3 md:py-6">
           {/* Left group - Logo + Address */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">

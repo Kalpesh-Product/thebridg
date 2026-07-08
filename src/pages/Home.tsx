@@ -44,7 +44,7 @@ export default function Home() {
             STATEMENT
           </h2>
 
-          <div className="flex justify-center my-10">
+          <div className="w-full flex justify-center my-10">
             <div className="w-[85%] max-w-3xl h-0.5 bg-white" />
           </div>
 

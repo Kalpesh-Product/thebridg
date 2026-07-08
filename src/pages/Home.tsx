@@ -5,26 +5,16 @@ export default function Home() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10 min-h-[calc(100vh-3.375rem)]">
+      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10 min-h-[calc(100vh-5.375rem)]">
         {/* Bridge Drawing */}
         <img src="/assets/BRIDG.png" alt="Bridge sketch" className="w-auto max-w-[750px] max-h-[22vh] mb-6" />
 
         {/* Tagline */}
-        <h1 className="font-serif text-3xl md:text-5xl font-normal leading-tight mb-8 max-w-3xl">
-          a BRIDG for{' '}
-          <span className="relative inline-block px-3 py-1">
-            <span className="relative z-10">Unbacked Founders</span>
-            <img
-              src="/assets/Main_BRIDG_11.png"
-              alt=""
-              aria-hidden="true"
-              className="absolute pointer-events-none"
-              style={{ bottom: '-15%', left: '2%', right: '-2%', width: '100%', height: '220%', objectFit: 'contain', objectPosition: 'left bottom', maxWidth: 'none' }}
-            />
-          </span>
-          <br />
-          to become LEGENDARY.
-        </h1>
+        <img
+          src="/assets/Main%20BRIDG%20Banner%20Quotes.png"
+          alt="a BRIDG for Unbacked Founders to become LEGENDARY."
+          className="w-auto max-w-2xl md:max-w-3xl mb-8"
+        />
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">

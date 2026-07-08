@@ -67,15 +67,15 @@ export default function Connect() {
 
   return (
     <PageLayout>
-      <div className={step === 2 ? "pt-3 pb-16 max-w-2xl mx-auto" : "pt-3 pb-4 max-w-2xl mx-auto"}>
+      <div className={step === 2 ? "pt-3 pb-16 max-w-5xl mx-auto" : "pt-3 pb-4 max-w-5xl mx-auto"}>
         {/* Step Indicator */}
-        {step < 4 && (
-          <div className="flex items-start justify-center gap-1 md:gap-2 mb-2">
+        {(
+          <div className="flex items-start justify-center gap-2 md:gap-3 mb-4 md:mb-8">
             {[1, 2, 3].map((s) => (
-              <div key={s} className="flex items-start gap-1 md:gap-2">
-                <div className="flex flex-col items-center sm:w-28">
+              <div key={s} className="flex items-start gap-2 md:gap-3">
+                <div className="flex flex-col items-center sm:w-32">
                   <div
-                    className={`w-8 h-8 text-xs rounded-full flex items-center justify-center font-semibold transition-colors duration-300 ${
+                    className={`w-10 h-10 md:w-12 md:h-12 text-sm md:text-base rounded-full flex items-center justify-center font-semibold transition-colors duration-300 ${
                       s < step
                         ? 'bg-[#00A868] text-white'
                         : s === step
@@ -85,13 +85,13 @@ export default function Connect() {
                   >
                     {s}
                   </div>
-                  <span className="text-xs mt-0.5 uppercase text-center whitespace-nowrap hidden sm:block">
+                  <span className="text-xs md:text-sm mt-1 uppercase text-center whitespace-nowrap hidden sm:block">
                     {s === 1 ? 'PERSONAL INFO' : s === 2 ? 'COMPANY INFO' : 'SUBMISSION'}
                   </span>
                 </div>
                 {s < 3 && (
                   <div
-                    className={`w-10 md:w-20 h-0.5 mt-[0.9375rem] transition-colors duration-300 ${
+                    className={`w-16 md:w-32 h-0.5 mt-5 md:mt-6 transition-colors duration-300 ${
                       s < step ? 'bg-[#00A868]' : 'bg-[#BDBDBD]'
                     }`}
                   />
@@ -103,12 +103,12 @@ export default function Connect() {
 
         {/* Step 1: Personal Info */}
         {step === 1 && (
-          <div>
-            <h2 className="text-xl font-normal text-center pt-4 mb-5 tracking-wide">
+          <div className="md:min-h-[60vh] flex flex-col justify-center">
+            <h2 className="text-2xl md:text-3xl font-normal text-center pt-6 mb-10 md:mb-16 tracking-wide">
               LET&apos;S SET UP YOUR ACCOUNT!
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10 md:gap-y-16">
               <LiquidSelect
                 placeholder="Support Required"
                 value={formData.supportRequired}
@@ -157,8 +157,8 @@ export default function Connect() {
               />
             </div>
 
-            <div className="flex justify-center pt-8">
-              <button onClick={() => setStep(2)} className="yellow-btn !px-7 !py-2 text-sm">Next</button>
+            <div className="flex justify-center pt-14 md:pt-20">
+              <button onClick={() => setStep(2)} className="yellow-btn">Next</button>
             </div>
           </div>
         )}
@@ -166,11 +166,11 @@ export default function Connect() {
         {/* Step 2: Company Info */}
         {step === 2 && (
           <div>
-            <h2 className="text-xl font-normal text-center mb-12 tracking-wide uppercase">
+            <h2 className="text-2xl md:text-3xl font-normal text-center pt-6 mb-10 md:mb-16 tracking-wide uppercase">
               ADD YOUR COMPANY DETAILS
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10 md:gap-y-16 mb-10">
               <input type="text" placeholder="Company Name" className="form-input-underline" value={formData.companyName} onChange={(e) => updateField('companyName', e.target.value)} />
               <input type="text" placeholder="Industry" className="form-input-underline" value={formData.industry} onChange={(e) => updateField('industry', e.target.value)} />
               <input type="text" placeholder="Company Size" className="form-input-underline" value={formData.companySize} onChange={(e) => updateField('companySize', e.target.value)} />
@@ -209,9 +209,9 @@ export default function Connect() {
 
             {/* About Company */}
             <div className="mb-8">
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-4">ABOUT COMPANY</h3>
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">ABOUT COMPANY</h3>
               {formData.aboutParagraphs.map((para, i) => (
-                <div key={i} className="border border-[#E0E0E0] rounded p-4 mb-3">
+                <div key={i} className="border border-[#E0E0E0] rounded p-6 mb-3">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm font-medium">Paragraph {i + 1}</span>
                     <button onClick={() => removeParagraph('about', i)} className="text-sm text-red-500 hover:text-red-700">Remove</button>
@@ -230,9 +230,9 @@ export default function Connect() {
 
             {/* Support Required */}
             <div className="mb-8">
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-4">SUPPORT REQUIRED</h3>
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">SUPPORT REQUIRED</h3>
               {formData.supportParagraphs.map((para, i) => (
-                <div key={i} className="border border-[#E0E0E0] rounded p-4 mb-3">
+                <div key={i} className="border border-[#E0E0E0] rounded p-6 mb-3">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm font-medium">Paragraph {i + 1}</span>
                     <button onClick={() => removeParagraph('support', i)} className="text-sm text-red-500 hover:text-red-700">Remove</button>
@@ -251,9 +251,9 @@ export default function Connect() {
 
             {/* Vision */}
             <div className="mb-8">
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-4">VISION (Optional)</h3>
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">VISION (Optional)</h3>
               {formData.visionParagraphs.map((para, i) => (
-                <div key={i} className="border border-[#E0E0E0] rounded p-4 mb-3">
+                <div key={i} className="border border-[#E0E0E0] rounded p-6 mb-3">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm font-medium">Paragraph {i + 1}</span>
                     <button onClick={() => removeParagraph('vision', i)} className="text-sm text-red-500 hover:text-red-700">Remove</button>
@@ -272,9 +272,9 @@ export default function Connect() {
 
             {/* Company Contact */}
             <div className="mb-8">
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-4">COMPANY CONTACT</h3>
-              <div className="border border-[#E0E0E0] rounded p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+              <h3 className="text-xl font-bold uppercase tracking-wider mb-4">COMPANY CONTACT</h3>
+              <div className="border border-[#E0E0E0] rounded p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-6">
                   <input type="email" placeholder="Contact Email" className="form-input-underline" value={formData.contactEmail} onChange={(e) => updateField('contactEmail', e.target.value)} />
                   <input type="tel" placeholder="Contact Number" className="form-input-underline" value={formData.contactNumber} onChange={(e) => updateField('contactNumber', e.target.value)} />
                   <input type="text" placeholder="Google Map Embed URL" className="form-input-underline" value={formData.googleMapUrl} onChange={(e) => updateField('googleMapUrl', e.target.value)} />
@@ -286,8 +286,8 @@ export default function Connect() {
             </div>
 
             <div className="flex justify-between">
-              <button onClick={() => setStep(1)} className="yellow-btn !px-7 !py-2 text-sm">Back</button>
-              <button onClick={() => setStep(3)} className="yellow-btn !px-7 !py-2 text-sm">Next</button>
+              <button onClick={() => setStep(1)} className="yellow-btn">Back</button>
+              <button onClick={() => setStep(3)} className="yellow-btn">Next</button>
             </div>
           </div>
         )}
@@ -295,25 +295,25 @@ export default function Connect() {
         {/* Step 3: Confirm */}
         {step === 3 && (
           <div className="text-center pt-4">
-            <h2 className="text-xl font-bold mb-3">You&apos;re almost done!</h2>
-            <p className="text-sm mb-6">Please confirm your submission.</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">You&apos;re almost done!</h2>
+            <p className="text-base mb-6">Please confirm your submission.</p>
 
             <div className="flex justify-between">
-              <button onClick={() => setStep(2)} className="yellow-btn !px-7 !py-2 text-sm">Back</button>
-              <button onClick={() => setStep(4)} className="yellow-btn !px-7 !py-2 text-sm">Confirm</button>
+              <button onClick={() => setStep(2)} className="yellow-btn">Back</button>
+              <button onClick={() => setStep(4)} className="yellow-btn">Confirm</button>
             </div>
           </div>
         )}
 
         {/* Step 4: Success */}
         {step === 4 && (
-          <div className="pt-4">
-            <h2 className="text-xl font-bold mb-5 text-center">You&apos;re All Set!</h2>
+          <div className="pt-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">You&apos;re All Set!</h2>
 
-            <p className="text-sm font-medium leading-relaxed mb-4 max-w-2xl">
+            <p className="text-lg md:text-xl font-medium leading-relaxed mb-4">
               An email has been sent to your email address containing all the further process for the activation. Our team will reach out to you shortly for more details and will guide you further within 48 hours.
             </p>
-            <p className="text-sm font-medium leading-relaxed mb-5 max-w-2xl">
+            <p className="text-lg md:text-xl font-medium leading-relaxed mb-6">
               Please let us know if there is any more queries from your side, or you can contact us at : response@thebridg.com
             </p>
 
@@ -321,19 +321,19 @@ export default function Connect() {
               href="https://gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm hover:opacity-70 transition-opacity mb-5"
+              className="inline-flex items-center gap-2 text-lg hover:opacity-70 transition-opacity mb-6"
             >
-              <SiGmail size={20} color="#EA4335" />
+              <SiGmail size={26} color="#EA4335" />
               <span className="underline">Open Gmail</span>
             </a>
 
-            <p className="text-sm mb-6">
+            <p className="text-base md:text-lg mb-8">
               Did not receive an email? Please check your spam folder.
             </p>
 
             <div className="flex justify-center">
               <Link to="/">
-                <button className="yellow-btn !px-7 !py-2 text-sm">Go to Home</button>
+                <button className="yellow-btn">Go to Home</button>
               </Link>
             </div>
           </div>

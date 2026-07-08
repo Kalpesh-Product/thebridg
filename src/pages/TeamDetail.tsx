@@ -45,14 +45,14 @@ export default function TeamDetail() {
   return (
     <PageLayout>
       <div className="pt-8 pb-16 px-6 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10">
           {/* Row 1, Col 1 - Name/Bio */}
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#00A868' }}>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#00A868' }}>
               {member.name}
             </h1>
 
-            <p className="text-base leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
+            <p className="text-lg leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
               {member.bio}
             </p>
 
@@ -75,24 +75,24 @@ export default function TeamDetail() {
 
           {/* Row 1, Col 2 - Color Card */}
           <div
-            className="w-full rounded-lg"
+            className="w-full max-w-[400px] mx-auto aspect-square mt-12 md:mt-16 rounded-lg"
             style={{ backgroundColor: member.color }}
           />
 
           {/* Row 2, Col 1 - Personal Hobbies */}
           <div className="pt-12">
-            <h3 className="text-xl font-bold uppercase tracking-wider mb-4">PERSONAL HOBBIES!</h3>
-            <p className="text-base leading-relaxed" style={{ color: '#1A1A1A' }}>
+            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">PERSONAL HOBBIES!</h3>
+            <p className="text-lg leading-relaxed" style={{ color: '#1A1A1A' }}>
               {member.hobbies}
             </p>
           </div>
 
           {/* Row 2, Col 2 - Connect Form */}
-          <div className="border border-[#1A1A1A] rounded-lg p-6 mt-12">
-            <h3 className="text-xl font-bold uppercase tracking-wider text-center mb-6">
+          <div className="border border-[#1A1A1A] rounded-lg p-8 mt-12">
+            <h3 className="text-2xl font-bold uppercase tracking-wider text-center mb-8">
               CONNECT WITH {member.name}!
             </h3>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-6">
               <input type="text" placeholder="Full Name" className="form-input-underline" />
               <input type="email" placeholder="Email" className="form-input-underline" />
               <input type="tel" placeholder="Phone Number" className="form-input-underline" />
@@ -100,8 +100,8 @@ export default function TeamDetail() {
               <input type="text" placeholder="City" className="form-input-underline" />
               <input type="text" placeholder="A Brief Message" className="form-input-underline" />
             </div>
-            <div className="flex justify-center pt-8">
-              <button className="yellow-btn !px-7 !py-2 text-sm">Submit</button>
+            <div className="flex justify-center pt-10">
+              <button className="yellow-btn">Submit</button>
             </div>
           </div>
         </div>

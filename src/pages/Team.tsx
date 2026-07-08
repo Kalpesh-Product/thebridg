@@ -13,12 +13,12 @@ export default function Team() {
     <PageLayout>
       <div className="pt-8 pb-16 px-6 md:px-10">
         {/* Team Cards Grid */}
-        <div className="flex flex-wrap justify-between gap-y-14 md:gap-y-16">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {teamMembers.map((member) => (
             <Link
               to={`/team/${member.slug}`}
               key={member.slug}
-              className="group block w-full md:w-[calc(50%-2rem)] max-w-[520px] rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+              className="group block w-full md:w-[calc(50%-1rem)] max-w-[520px] rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1"
             >
               <div
                 className="aspect-[1/1.1] flex flex-col justify-end p-8 relative"

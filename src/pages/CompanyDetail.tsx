@@ -77,25 +77,25 @@ export default function CompanyDetail() {
   return (
     <PageLayout>
       <div className="pt-8 pb-16 px-6 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10">
           {/* Row 1, Col 1 - Name/Description */}
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#00A868' }}>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#00A868' }}>
               {company.name}
             </h1>
             <div className="relative inline-block mb-8">
-              <span className="text-lg font-bold">{company.category}</span>
+              <span className="text-xl font-bold">{company.category}</span>
               <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 80 4" fill="none" preserveAspectRatio="none">
                 <path d="M1 2 Q15 1 30 2 Q45 3 60 2 Q70 1 79 2" stroke="#00A868" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </div>
 
-            <p className="text-base leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
+            <p className="text-lg leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
               {company.description}
             </p>
 
             <div className="flex items-center gap-6">
-              <a href="#" className="text-base font-medium" style={{ color: '#1A1A1A' }}>
+              <a href="#" className="text-lg font-medium" style={{ color: '#1A1A1A' }}>
                 <span className="underline" style={{ color: '#1A73E8', textDecorationColor: '#1A73E8' }}>{company.website}</span>
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-[#1A1A1A] flex items-center justify-center hover:bg-[#1A1A1A] hover:text-white transition-colors">
@@ -113,24 +113,24 @@ export default function CompanyDetail() {
 
           {/* Row 1, Col 2 - Color Card */}
           <div
-            className="w-full rounded-lg"
+            className="w-full max-w-[400px] mx-auto aspect-square mt-12 md:mt-16 rounded-lg"
             style={{ backgroundColor: company.color }}
           />
 
           {/* Row 2, Col 1 - Why We Partnered */}
           <div className="pt-12">
-            <h3 className="text-xl font-bold uppercase tracking-wider mb-4">WHY WE PARTNERED?</h3>
-            <p className="text-base leading-relaxed" style={{ color: '#1A1A1A' }}>
+            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">WHY WE PARTNERED?</h3>
+            <p className="text-lg leading-relaxed" style={{ color: '#1A1A1A' }}>
               {company.whyPartnered}
             </p>
           </div>
 
           {/* Row 2, Col 2 - Connect Form */}
-          <div className="border border-[#1A1A1A] rounded-lg p-6 mt-12">
-            <h3 className="text-xl font-bold uppercase tracking-wider text-center mb-6">
+          <div className="border border-[#1A1A1A] rounded-lg p-8 mt-12">
+            <h3 className="text-2xl font-bold uppercase tracking-wider text-center mb-8">
               CONNECT WITH {company.name}!
             </h3>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-6">
               <input type="text" placeholder="Full Name" className="form-input-underline" />
               <input type="email" placeholder="Email" className="form-input-underline" />
               <input type="tel" placeholder="Phone Number" className="form-input-underline" />
@@ -147,8 +147,8 @@ export default function CompanyDetail() {
                 ]}
               />
             </div>
-            <div className="flex justify-center pt-8">
-              <button className="yellow-btn !px-7 !py-2 text-sm">Submit</button>
+            <div className="flex justify-center pt-10">
+              <button className="yellow-btn">Submit</button>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function Home() {
       {/* Mission Statement Section */}
       <section className="relative -mx-6 md:-mx-12">
         <div
-          className="w-full py-20 px-6 md:px-12 text-center"
+          className="w-full h-[420px] md:h-[560px] px-6 md:px-12 text-center flex flex-col items-center justify-center"
           style={{ backgroundColor: '#2D2D2D' }}
         >
           <h2

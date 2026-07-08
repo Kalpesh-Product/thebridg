@@ -44,7 +44,7 @@ export default function TeamDetail() {
 
   return (
     <PageLayout>
-      <div className="pt-8 pb-16 px-6 md:px-10">
+      <div className="pt-16 md:pt-20 pb-16 px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10">
           {/* Row 1, Col 1 - Name/Bio */}
           <div>
@@ -75,9 +75,12 @@ export default function TeamDetail() {
 
           {/* Row 1, Col 2 - Color Card */}
           <div
-            className="w-full max-w-[400px] mx-auto aspect-square mt-12 md:mt-16 rounded-lg"
+            className="w-full max-w-[400px] mx-auto aspect-square rounded-lg"
             style={{ backgroundColor: member.color }}
           />
+
+          {/* Divider */}
+          <div className="col-span-full border-t-2 border-[#BBBBBB]" />
 
           {/* Row 2, Col 1 - Personal Hobbies */}
           <div className="pt-12">
@@ -89,7 +92,7 @@ export default function TeamDetail() {
 
           {/* Row 2, Col 2 - Connect Form */}
           <div className="border border-[#1A1A1A] rounded-lg p-8 mt-12">
-            <h3 className="text-2xl font-bold uppercase tracking-wider text-center mb-8">
+            <h3 className="block w-fit mx-auto text-2xl font-bold uppercase tracking-wider mb-8 border-b-2 border-[#1A1A1A] pb-1">
               CONNECT WITH {member.name}!
             </h3>
             <div className="grid grid-cols-2 gap-x-10 gap-y-6">

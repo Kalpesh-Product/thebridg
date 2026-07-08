@@ -48,6 +48,8 @@ export default function Concepts() {
             <ScreenshotConceptCard key={index} concept={concept} />
           ))}
         </div>
+
+        <div className="border-t-2 border-[#BBBBBB] mt-8" />
       </div>
     </PageLayout>
   );

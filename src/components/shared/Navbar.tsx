@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router';
 
 const navItems = [
-  { label: 'OUR COMPANIES', path: '/companies' },
-  { label: 'OUR TEAM', path: '/team' },
+  { label: 'COMPANIES', path: '/companies' },
+  { label: 'TEAM', path: '/team' },
   { label: 'CONCEPTS', path: '/concepts' },
   { label: 'CONNECT', path: '/connect' },
   { label: 'INVEST', path: '/invest' },

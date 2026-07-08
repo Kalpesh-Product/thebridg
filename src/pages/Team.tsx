@@ -11,14 +11,14 @@ const teamMembers = [
 export default function Team() {
   return (
     <PageLayout>
-      <div className="pt-8 pb-16 px-6 md:px-10">
+      <div className="pt-16 md:pt-24 pb-16 px-6 md:px-10">
         {/* Team Cards Grid */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+        <div className="flex flex-wrap justify-center gap-16 md:gap-24">
           {teamMembers.map((member) => (
             <Link
               to={`/team/${member.slug}`}
               key={member.slug}
-              className="group block w-full md:w-[calc(50%-1rem)] max-w-[520px] rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+              className="group block w-full md:w-[calc(50%-3rem)] max-w-[520px] rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1"
             >
               <div
                 className="aspect-[1/1.1] flex flex-col justify-end p-8 relative"

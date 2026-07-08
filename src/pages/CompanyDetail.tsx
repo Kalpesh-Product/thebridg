@@ -14,7 +14,7 @@ const companiesData: Record<string, {
   studom: {
     name: 'STUDOM',
     category: 'Education',
-    color: '#8B6F5E',
+    color: '#784840',
     description: 'Studom is a platform that helps students discover, compare, and apply to universities in one place. It simplifies the search process by bringing together clear and structured information, allowing students to explore different options and understand what suits them best. By making information easy to access, compare, and apply through a single platform, Studom helps students make more confident and informed decisions about their higher education journey.',
     website: 'Studom.co',
     whyPartnered: 'We partnered with Studom because it brings everything students need into one place, something no other platform currently offers. Its unique, all in one approach makes discovering and comparing universities simpler, clearer, and more accessible.',
@@ -22,7 +22,7 @@ const companiesData: Record<string, {
   unistyle: {
     name: 'UNISTYLE',
     category: 'Merchandise',
-    color: '#7A7A7A',
+    color: '#707070',
     description: 'UniStyle is a platform that brings official school uniforms and university merchandise into one place. It simplifies the buying process by offering authentic products through a single platform, making it easier for students, parents, alumni, and supporters to find what they need. By making official apparel more accessible, UniStyle helps institutions connect with their communities through products they can trust.',
     website: 'Unistyle.co',
     whyPartnered: 'We partnered with UniStyle because it brings official school uniforms and university merchandise together on one platform, something that is often fragmented today. Its focused approach makes finding and purchasing authentic institutional apparel simpler, more convenient, and more accessible.',
@@ -30,7 +30,7 @@ const companiesData: Record<string, {
   'daily-daily': {
     name: 'DAILY DAILY',
     category: 'Subscription',
-    color: '#7A7A7A',
+    color: '#505050',
     description: 'Daily Daily is a platform that helps people subscribe to and receive everyday essentials from local stores in one place. It simplifies the shopping process by bringing together daily needs through a convenient subscription model, making regular purchases easier to manage. By making everyday shopping more reliable and hassle free, Daily Daily helps people save time while ensuring they never run out of the products they use most.',
     website: 'Dailydaily.co',
     whyPartnered: 'We partnered with Daily Daily because it makes purchasing everyday essentials simpler through a single subscription platform, something that is often time consuming to manage. Its convenient approach makes recurring shopping easier, more reliable, and more accessible.',
@@ -38,7 +38,7 @@ const companiesData: Record<string, {
   stintern: {
     name: 'STINTERN',
     category: 'Education/HR',
-    color: '#8B4A6B',
+    color: '#780048',
     description: 'Stintern is a platform that helps students discover and apply for internships in one place. It simplifies the internship search process by bringing together opportunities from different companies, allowing students to explore roles that match their skills and career goals. By making internship opportunities easier to access and apply for, Stintern helps students gain valuable industry experience with greater confidence.',
     website: 'Stintern.co',
     whyPartnered: 'We partnered with Stintern because it bridges the gap between students and employers by making internship opportunities easier to discover and access. Its focused approach helps students gain practical experience while enabling companies to connect with emerging talent.',
@@ -46,7 +46,7 @@ const companiesData: Record<string, {
   flagit: {
     name: 'FLAGIT',
     category: 'Civic Tech',
-    color: '#8B6F5E',
+    color: '#784840',
     description: 'Flagit is a platform that enables people to report road and traffic violations in a simple and responsible way. It allows users to submit photos of violations, which are verified before being forwarded to the relevant authorities for action. By making civic reporting more accessible and transparent, Flagit encourages safer roads while rewarding citizens for their genuine contributions.',
     website: 'Flagit.app',
     whyPartnered: 'We partnered with Flagit because it empowers citizens to play an active role in improving road safety through responsible reporting. Its community driven approach supports safer streets while encouraging greater public participation and accountability.',
@@ -54,7 +54,7 @@ const companiesData: Record<string, {
   datamatic: {
     name: 'DATAMATIC',
     category: 'Data/Analytics',
-    color: '#8B4A6B',
+    color: '#780048',
     description: 'Datamatic is a platform that helps businesses discover and access structured company information in one place. It simplifies the research process by bringing together reliable corporate data, allowing users to explore companies, industries, and key business insights with ease. By making business information easier to access and understand, Datamatic helps users make more informed decisions with greater confidence.',
     website: 'Datamatic.io',
     whyPartnered: 'We partnered with Datamatic because it makes business information easier to discover through one structured platform, something that is often difficult to access and organize. Its data driven approach makes researching companies simpler, clearer, and more accessible.',
@@ -62,7 +62,7 @@ const companiesData: Record<string, {
   allperspectives: {
     name: 'ALLPERSPECTIVES',
     category: 'Relationships',
-    color: '#7A7A7A',
+    color: '#707070',
     description: 'Allperspectives is a platform that explores the different perspectives people experience in everyday relationships. It brings together stories and experiences from multiple points of view, helping people better understand the thoughts, emotions, and challenges of others. By presenting different sides of the same relationship, Allperspectives encourages empathy, meaningful conversations, and deeper human connections.',
     website: 'Allperspectives.com',
     whyPartnered: 'We partnered with Allperspectives because it encourages people to see relationships through more than one perspective, something that is often overlooked. Its thoughtful approach promotes understanding, empathy, and more meaningful conversations across everyday life.',
@@ -80,13 +80,13 @@ export default function CompanyDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
           {/* Row 1, Col 1 - Name/Description */}
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#00A868' }}>
               {company.name}
             </h1>
             <div className="relative inline-block mb-8">
               <span className="text-lg font-bold">{company.category}</span>
               <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 80 4" fill="none" preserveAspectRatio="none">
-                <path d="M1 2 Q15 1 30 2 Q45 3 60 2 Q70 1 79 2" stroke="#FFEB3B" strokeWidth="3" strokeLinecap="round" />
+                <path d="M1 2 Q15 1 30 2 Q45 3 60 2 Q70 1 79 2" stroke="#00A868" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </div>
 

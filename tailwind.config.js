@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Lato', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        serif: ['Lora', 'Georgia', 'serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        dm: ['DM Sans', 'Lato', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

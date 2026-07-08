@@ -41,16 +41,10 @@
     font-size: 100%;
   }
 
-  @media (min-width: 768px) {
-    html {
-      font-size: 175%;
-    }
-  }
-
   body {
     @apply bg-background text-foreground;
     font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background-color: #FFF0EB;
+    background-color: #FFFFFF;
     color: #1A1A1A;
   }
 }
@@ -58,11 +52,11 @@
 @layer components {
   .yellow-btn {
     @apply px-9 py-3.5 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-200;
-    background-color: #FFEB3B;
+    background-color: #009966;
     color: #1A1A1A;
   }
   .yellow-btn:hover {
-    background-color: #FDD835;
+    background-color: #00794D;
     transform: scale(1.02);
   }
   .yellow-btn:active {
@@ -78,7 +72,7 @@
   }
 
   .nav-link {
-    @apply text-xs font-medium uppercase tracking-wide transition-opacity duration-200 relative;
+    @apply font-serif text-sm md:text-base font-normal uppercase tracking-wide transition-opacity duration-200 relative;
     color: #1A1A1A;
   }
   .nav-link:hover {
@@ -91,7 +85,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: #FFEB3B;
+    background: #00A868;
     border-radius: 2px;
   }
 
@@ -99,14 +93,14 @@
     @apply w-full py-2 bg-transparent border-0 border-b-2 border-[#666] text-sm outline-none transition-colors duration-200 placeholder:text-[#999];
   }
   .form-input-underline:focus {
-    border-bottom-color: #FFEB3B;
+    border-bottom-color: #00A868;
   }
 
   .form-input-box {
     @apply w-full px-4 py-3 bg-transparent border border-[#E0E0E0] rounded text-sm outline-none transition-colors duration-200 placeholder:text-[#999];
   }
   .form-input-box:focus {
-    border-color: #FFEB3B;
+    border-color: #00A868;
   }
 }
 

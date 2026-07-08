@@ -64,7 +64,7 @@ const concepts: Concept[] = [
     objectPosition: 'center 15%',
     imagePosition: 'left',
     applyImage: '/assets/BRIDG__10.png',
-    bgColor: '#F3E9E4',
+    bgColor: '#FFFFFF',
     textColor: '#1A1A1A',
   },
 ];
@@ -91,10 +91,10 @@ export default function Concepts() {
 
 function ApplyOval({ image = '/assets/BRIDG__9.png' }: { image?: string }) {
   return (
-    <Link to="/connect" className="relative inline-flex items-center justify-center px-8 py-2.5 group">
+    <Link to="/connect" className="relative inline-flex items-center justify-center px-10 py-3.5 group">
       <span
-        className="relative z-10 text-xs font-bold uppercase tracking-wider"
-        style={{ color: '#FFEB3B' }}
+        className="relative z-10 text-sm md:text-base font-bold uppercase tracking-wider"
+        style={{ color: '#00A868' }}
       >
         Apply
       </span>
@@ -122,17 +122,17 @@ function OverlayConceptCard({ concept }: { concept: Concept }) {
       <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0))' }} />
 
       <div className="relative flex flex-col justify-between p-8 md:p-12" style={{ minHeight: '100vh' }}>
-        <div className="max-w-xs">
-          <h3 className="text-xl md:text-2xl font-bold tracking-wider mb-4" style={{ color: concept.textColor }}>
+        <div className="max-w-md">
+          <h3 className="text-3xl md:text-4xl font-bold tracking-wider mb-4" style={{ color: concept.textColor }}>
             {concept.name}
           </h3>
-          <p className="text-lg md:text-xl leading-relaxed italic" style={{ color: concept.textColor, opacity: 0.9 }}>
+          <p className="text-2xl md:text-3xl leading-relaxed" style={{ color: concept.textColor, opacity: 0.9 }}>
             {concept.quote}
           </p>
         </div>
 
         <div className="self-end text-center">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-wider mb-4" style={{ color: '#FFEB3B' }}>
+          <h2 className="text-5xl md:text-7xl font-bold tracking-wider mb-5" style={{ color: '#00A868' }}>
             {concept.title}
           </h2>
           <ApplyOval image={concept.applyImage} />
@@ -181,21 +181,21 @@ function ConceptCard({ concept }: { concept: Concept }) {
           }`}
         >
           <h3
-            className="text-xl md:text-2xl font-bold tracking-wider mb-4"
+            className="text-3xl md:text-4xl font-bold tracking-wider mb-4"
             style={{ color: concept.textColor }}
           >
             {concept.name}
           </h3>
           <p
-            className="text-lg md:text-xl leading-relaxed mb-6 max-w-md italic"
+            className="text-2xl md:text-3xl leading-relaxed mb-6 max-w-lg"
             style={{ color: concept.textColor, opacity: 0.9 }}
           >
             {concept.quote}
           </p>
-          <div className="text-center">
+          <div className={imageOnRight ? 'text-left' : 'text-right'}>
             <h2
-              className="text-2xl md:text-3xl font-bold tracking-wider mb-4"
-              style={{ color: '#FFEB3B' }}
+              className="text-5xl md:text-7xl font-bold tracking-wider mb-5"
+              style={{ color: '#00A868' }}
             >
               {concept.title}
             </h2>

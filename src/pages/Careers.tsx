@@ -17,7 +17,7 @@ export default function Careers() {
           <h1 className="relative inline-block text-2xl md:text-3xl font-bold uppercase tracking-wider">
             OPEN POSITIONS
             <svg className="absolute -bottom-2 left-0 w-[110%] -left-[5%]" style={{ height: '6px' }} viewBox="0 0 200 8" fill="none" preserveAspectRatio="none">
-              <path d="M2 4 Q30 2 60 4 Q90 6 120 3 Q150 1 180 4 Q190 5 198 4" stroke="#FFEB3B" strokeWidth="5" strokeLinecap="round" fill="none" />
+              <path d="M2 4 Q30 2 60 4 Q90 6 120 3 Q150 1 180 4 Q190 5 198 4" stroke="#00A868" strokeWidth="5" strokeLinecap="round" fill="none" />
             </svg>
           </h1>
         </div>

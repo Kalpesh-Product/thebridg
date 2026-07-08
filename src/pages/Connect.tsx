@@ -77,9 +77,9 @@ export default function Connect() {
                   <div
                     className={`w-8 h-8 text-xs rounded-full flex items-center justify-center font-semibold transition-colors duration-300 ${
                       s < step
-                        ? 'bg-[#4CAF50] text-white'
+                        ? 'bg-[#00A868] text-white'
                         : s === step
-                        ? 'bg-[#FFEB3B] text-[#1A1A1A]'
+                        ? 'bg-[#4ADE80] text-[#1A1A1A]'
                         : 'bg-[#BDBDBD] text-[#1A1A1A]'
                     }`}
                   >
@@ -92,7 +92,7 @@ export default function Connect() {
                 {s < 3 && (
                   <div
                     className={`w-10 md:w-20 h-0.5 mt-[0.9375rem] transition-colors duration-300 ${
-                      s < step ? 'bg-[#4CAF50]' : 'bg-[#BDBDBD]'
+                      s < step ? 'bg-[#00A868]' : 'bg-[#BDBDBD]'
                     }`}
                   />
                 )}

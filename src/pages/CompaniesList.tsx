@@ -23,7 +23,7 @@ export default function CompaniesList() {
           <span className="text-sm font-medium uppercase tracking-wider relative">
             LIST VIEW
             <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 60 4" fill="none" preserveAspectRatio="none">
-              <path d="M1 2 Q10 1 20 2 Q30 3 40 2 Q50 1 59 2" stroke="#FFEB3B" strokeWidth="3" strokeLinecap="round" />
+              <path d="M1 2 Q10 1 20 2 Q30 3 40 2 Q50 1 59 2" stroke="#00A868" strokeWidth="3" strokeLinecap="round" />
             </svg>
           </span>
         </div>

@@ -10,28 +10,28 @@ const teamData: Record<string, {
 }> = {
   kabir: {
     name: 'KABIR',
-    color: '#8B6F5E',
+    color: '#505050',
     bio: `Kabir is an undergraduate student at the University of Birmingham Dubai with a strong passion for Investment Banking, Venture Capital, entrepreneurship and building projects from scratch. He is deeply interested in creating impactful platforms and ecosystems that empower students and young entrepreneurs to take risks earlier and build meaningful ventures. Through his exposure to startups, business ecosystems and real world projects, he aims to bridge innovation, technology and community driven impact into scalable long term ventures that create lasting value.`,
     hobbies: `Outside of work and academics, Kabir is deeply passionate about birds, cats and caring for animals. He enjoys watching and deep diving into Formula 1, and as a fun fact, greatly admires the way Harvey Specter carries himself in the tv show Suits.`,
     socials: [{ type: 'linkedin', url: '#' }, { type: 'x', url: '#' }],
   },
   abrar: {
     name: 'ABRAR',
-    color: '#8B6F5E',
+    color: '#784840',
     bio: `Abrar is a seasoned entrepreneur with close to 15 years of experience of building startups from scratch and 10+ years of experience as a founder. He has been instrumental and was part of the inception teams which designed the initial Ad-Tech ecosystem via Komli Media and later the TV analog industry which transformed into digitalised TV Guide in India. As a founder he also launched India's Premier Location Based Discount Search Engine Squeakee and was instrumental in on-boarding and digitalising thousands of local merchants via its proprietary SaaS based platform which was later acquired by ShopClues. Currently he is living the life that he feels happy about and building an ecosystem around the same.`,
     hobbies: `Abrar has a deep passion for watches and enjoys collecting everything from retro and mechanical pieces to timeless classics. He is also passionate about vintage cars and values spending meaningful and quality time with his family above everything else.`,
     socials: [{ type: 'x', url: '#' }, { type: 'linkedin', url: '#' }],
   },
   kalpesh: {
     name: 'Kalpesh',
-    color: '#8B4A6B',
+    color: '#780048',
     bio: `Kalpesh is a talented UI/UX designer with a keen eye for detail and a passion for creating intuitive digital experiences. He brings a user-centered approach to every project, ensuring that designs are both aesthetically pleasing and functionally effective. His expertise spans across web and mobile platforms.`,
     hobbies: `Kalpesh loves exploring new design trends and tools. He enjoys sketching, photography, and finding inspiration in everyday objects and architecture.`,
     socials: [{ type: 'linkedin', url: '#' }, { type: 'x', url: '#' }],
   },
   rehana: {
     name: 'Rehana',
-    color: '#7A7A7A',
+    color: '#707070',
     bio: `Rehana is a meticulous data professional who ensures the accuracy and integrity of information across all operations. With her analytical mindset and attention to detail, she plays a crucial role in supporting informed decision-making throughout the organization.`,
     hobbies: `Rehana enjoys reading, solving puzzles, and exploring new cuisines. She finds joy in organizing community events and spending time with her close-knit circle of friends.`,
     socials: [{ type: 'linkedin', url: '#' }, { type: 'x', url: '#' }],
@@ -48,7 +48,7 @@ export default function TeamDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
           {/* Row 1, Col 1 - Name/Bio */}
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#FFEB3B' }}>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#00A868' }}>
               {member.name}
             </h1>
 

@@ -66,13 +66,15 @@ export default function Companies() {
                   </p>
                 </div>
                 <div className="hidden md:block w-0.5 bg-[#BBBBBB]" />
-                <div className="text-center">
+                <div className="flex flex-col items-center text-center h-full">
                   <p className="text-sm font-bold uppercase tracking-wider mb-2" style={{ color: '#00A868' }}>
                     Company Status:
                   </p>
-                  <p className="text-sm md:text-base" style={{ color: '#1A1A1A' }}>
-                    Work in progress
-                  </p>
+                  <div className="flex-1 flex items-center pb-4">
+                    <p className="text-sm md:text-base" style={{ color: '#1A1A1A' }}>
+                      Work in progress
+                    </p>
+                  </div>
                 </div>
               </div>
             </Link>

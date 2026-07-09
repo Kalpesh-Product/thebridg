@@ -22,7 +22,7 @@ export default function Invest() {
   return (
     <PageLayout>
       <div className="pt-8 pb-16 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 lg:gap-x-36 gap-y-10 items-start">
           {/* Left: copy */}
           <div>
             <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#00A868' }}>

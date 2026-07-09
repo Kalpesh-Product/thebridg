@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <PageLayout noFooterGap>
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10">
+      <section className="flex flex-col items-center justify-center text-center pt-6 pb-10 min-h-[calc(100vh-5.375rem)]">
         {/* Bridge Drawing */}
         <img src="/assets/BRIDG.png" alt="Bridge sketch" className="w-auto max-w-[750px] max-h-[22vh] mb-6" />
 
@@ -45,14 +45,14 @@ export default function Home() {
           </h2>
 
           <div className="w-full flex justify-center my-10">
-            <div className="w-[85%] max-w-3xl h-0.5 bg-white" />
+            <div className="w-[88%] max-w-4xl h-0.5 bg-white" />
           </div>
 
-          <p className="font-serif text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed">
-            <span className="block pb-1">Building A Home For Early Founders Who Are Overlooked,</span>
-            <span className="block">Underfunded, Self Driven, And Determined To Build What</span>
+          <p className="font-serif text-xl md:text-2xl text-white max-w-6xl mx-auto leading-relaxed">
+            <span className="block pb-1">Building A Home For Early Founders Who Are Overlooked, Underfunded,</span>
+            <span className="block">Self Driven, And Determined To Build What</span>
           </p>
-          <p className="font-serif text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed mt-2">
+          <p className="font-serif text-xl md:text-2xl text-white max-w-6xl mx-auto leading-relaxed mt-6">
             {/* <YellowHighlight className="font-semibold">OTHERS WON&apos;T.</YellowHighlight> */}
             <span className="relative inline-block px-3 py-1">
               <span className="relative z-10 font-semibold">OTHERS WON&apos;T.</span>

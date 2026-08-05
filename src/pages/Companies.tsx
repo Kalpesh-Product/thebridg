@@ -16,7 +16,7 @@ export default function Companies() {
     <PageLayout noFooterGap>
       <div className="pt-8 pb-0 px-6 md:px-10">
         {/* View Toggle */}
-        <div className="flex gap-8 mb-8">
+        <div className="flex gap-8 mb-16">
           <span className="text-sm font-medium uppercase tracking-wider relative">
             GRID VIEW
             <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 60 4" fill="none" preserveAspectRatio="none">

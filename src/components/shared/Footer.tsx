@@ -5,7 +5,7 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
     <footer className={noGap ? 'w-full' : 'w-full mt-16'} style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-[1800px] mx-auto px-6 md:px-12">
         {!noGap && <div className="w-full h-0.5" style={{ backgroundColor: '#1A1A1A' }} />}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 py-3 md:py-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 py-6 md:py-10">
           {/* Left group - Logo + Address */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
             <div>
@@ -14,7 +14,7 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
               </Link>
             </div>
 
-            <div className="font-serif text-xs" style={{ color: '#1A1A1A' }}>
+            <div className="font-serif text-sm md:ml-6" style={{ color: '#1A1A1A' }}>
               <p className="font-semibold">BRIDG</p>
               <p className="mt-1">BIZ Nest Co-Working, Sunteck Kanika Park,</p>
               <p>Panjim, Goa - India 403001</p>
@@ -23,14 +23,14 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
           </div>
 
           {/* Right group - Links */}
-          <div className="flex gap-8 md:gap-12">
-            <div className="flex flex-col gap-2 text-xs">
+          <div className="flex gap-8 md:gap-12 md:mr-10 lg:mr-16">
+            <div className="flex flex-col gap-2 text-sm">
               <span className="font-serif font-semibold uppercase tracking-wider cursor-default">ABOUT</span>
               <Link to="/careers" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">CAREER</Link>
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">FAQS</Link>
             </div>
 
-            <div className="flex flex-col gap-2 text-xs">
+            <div className="flex flex-col gap-2 text-sm">
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">PRIVACY</Link>
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">T&C</Link>
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">CONTACT</Link>

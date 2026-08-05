@@ -83,8 +83,11 @@ export default function CompanyDetail() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4 -mt-6 md:-mt-10" style={{ color: '#00A868' }}>
               {company.name}
             </h1>
-            <div className="inline-block mb-8 border-b-2" style={{ borderColor: '#00A868' }}>
+            <div className="relative inline-block mb-8">
               <span className="text-xl font-bold">{company.category}</span>
+              <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 60 4" fill="none" preserveAspectRatio="none">
+                <path d="M1 2 Q10 1 20 2 Q30 3 40 2 Q50 1 59 2" stroke="#00A868" strokeWidth="3" strokeLinecap="round" />
+              </svg>
             </div>
 
             <p className="text-[24px] leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>

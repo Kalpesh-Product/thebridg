@@ -44,15 +44,15 @@ export default function TeamDetail() {
 
   return (
     <PageLayout>
-      <div className="pt-16 md:pt-20 pb-16 px-6 md:px-10">
+      <div className="pt-20 md:pt-24 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10">
           {/* Row 1, Col 1 - Name/Bio */}
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#00A868' }}>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 -mt-6 md:-mt-10" style={{ color: '#00A868' }}>
               {member.name}
             </h1>
 
-            <p className="text-lg leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
+            <p className="text-[24px] leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
               {member.bio}
             </p>
 
@@ -75,7 +75,7 @@ export default function TeamDetail() {
 
           {/* Row 1, Col 2 - Color Card */}
           <div
-            className="w-full max-w-[400px] mx-auto aspect-square rounded-lg"
+            className="w-full max-w-[460px] mx-auto mt-4 aspect-square rounded-lg"
             style={{ backgroundColor: member.color }}
           />
 
@@ -84,8 +84,8 @@ export default function TeamDetail() {
 
           {/* Row 2, Col 1 - Personal Hobbies */}
           <div className="pt-12">
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">PERSONAL HOBBIES!</h3>
-            <p className="text-lg leading-relaxed" style={{ color: '#1A1A1A' }}>
+            <h3 className="text-3xl font-bold uppercase tracking-wider mb-10">PERSONAL HOBBIES!</h3>
+            <p className="text-[24px] leading-relaxed" style={{ color: '#1A1A1A' }}>
               {member.hobbies}
             </p>
           </div>

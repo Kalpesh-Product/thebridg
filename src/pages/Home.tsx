@@ -57,11 +57,11 @@ export default function Home() {
             <span className="relative inline-block px-3 py-1">
               <span className="relative z-10 font-semibold">OTHERS WON&apos;T.</span>
               <img
-                src="/assets/BRIDG__8.png"
+                src="/assets/Main_BRIDG__7.png"
                 alt=""
                 aria-hidden="true"
                 className="absolute pointer-events-none"
-                style={{ top: '-234%', left: '-107%', width: '314%', height: '364%', objectFit: 'fill', maxWidth: 'none' }}
+                style={{ top: '-252%', left: '-137%', width: '375%', height: '400%', objectFit: 'fill', maxWidth: 'none' }}
               />
             </span>
           </p>

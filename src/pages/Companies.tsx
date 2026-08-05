@@ -56,22 +56,22 @@ export default function Companies() {
               </div>
 
               {/* Meta row: description | divider | status, with a rule below */}
-              <div className="grid grid-cols-1 md:grid-cols-[4fr_auto_1fr] gap-4 md:gap-10 mt-6 pb-8 border-b-2 border-[#BBBBBB]">
+              <div className="grid grid-cols-1 md:grid-cols-[4fr_auto_1fr] gap-4 md:gap-10 mt-10 pt-2 pb-8 border-b-2 border-[#BBBBBB]">
                 <div>
-                  <p className="text-sm font-bold uppercase tracking-wider mb-2" style={{ color: '#00A868' }}>
+                  <p className="text-base md:text-lg font-bold uppercase tracking-wider mb-2" style={{ color: '#00A868' }}>
                     Company Description:
                   </p>
-                  <p className="text-sm md:text-base leading-relaxed" style={{ color: '#1A1A1A' }}>
+                  <p className="text-base md:text-lg leading-relaxed" style={{ color: '#1A1A1A' }}>
                     {company.desc}
                   </p>
                 </div>
                 <div className="hidden md:block w-0.5 bg-[#BBBBBB]" />
                 <div className="flex flex-col items-center text-center h-full">
-                  <p className="text-sm font-bold uppercase tracking-wider mb-2" style={{ color: '#00A868' }}>
+                  <p className="text-base md:text-lg font-bold uppercase tracking-wider mb-2" style={{ color: '#00A868' }}>
                     Company Status:
                   </p>
                   <div className="flex-1 flex items-center pb-4">
-                    <p className="text-sm md:text-base" style={{ color: '#1A1A1A' }}>
+                    <p className="text-base md:text-lg" style={{ color: '#1A1A1A' }}>
                       Work in progress
                     </p>
                   </div>

@@ -76,27 +76,24 @@ export default function CompanyDetail() {
 
   return (
     <PageLayout>
-      <div className="pt-16 md:pt-20 pb-16 px-6 md:px-10">
+      <div className="pt-20 md:pt-24 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10">
           {/* Row 1, Col 1 - Name/Description */}
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#00A868' }}>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 -mt-6 md:-mt-10" style={{ color: '#00A868' }}>
               {company.name}
             </h1>
-            <div className="relative inline-block mb-8">
+            <div className="inline-block mb-8 border-b-2" style={{ borderColor: '#00A868' }}>
               <span className="text-xl font-bold">{company.category}</span>
-              <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 80 4" fill="none" preserveAspectRatio="none">
-                <path d="M1 2 Q15 1 30 2 Q45 3 60 2 Q70 1 79 2" stroke="#00A868" strokeWidth="3" strokeLinecap="round" />
-              </svg>
             </div>
 
-            <p className="text-lg leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
+            <p className="text-[24px] leading-relaxed mb-8" style={{ color: '#1A1A1A' }}>
               {company.description}
             </p>
 
             <div className="flex items-center gap-6">
-              <a href="#" className="text-lg font-medium" style={{ color: '#1A1A1A' }}>
-                <span className="underline" style={{ color: '#1A73E8', textDecorationColor: '#1A73E8' }}>{company.website}</span>
+              <a href="#" className="text-[20px] font-medium" style={{ color: '#1A1A1A' }}>
+                <span style={{ color: '#1A73E8' }}>{company.website}</span>
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-[#1A1A1A] flex items-center justify-center hover:bg-[#1A1A1A] hover:text-white transition-colors">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -113,7 +110,7 @@ export default function CompanyDetail() {
 
           {/* Row 1, Col 2 - Color Card */}
           <div
-            className="w-full max-w-[400px] mx-auto aspect-square rounded-lg"
+            className="w-full max-w-[460px] mx-auto mt-4 aspect-square rounded-lg"
             style={{ backgroundColor: company.color }}
           />
 
@@ -122,8 +119,8 @@ export default function CompanyDetail() {
 
           {/* Row 2, Col 1 - Why We Partnered */}
           <div className="pt-12">
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-4">WHY WE PARTNERED?</h3>
-            <p className="text-lg leading-relaxed" style={{ color: '#1A1A1A' }}>
+            <h3 className="text-3xl font-bold uppercase tracking-wider mb-10">WHY WE PARTNERED?</h3>
+            <p className="text-[24px] leading-relaxed" style={{ color: '#1A1A1A' }}>
               {company.whyPartnered}
             </p>
           </div>

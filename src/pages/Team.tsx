@@ -13,7 +13,7 @@ export default function Team() {
     <PageLayout>
       <div className="pt-16 md:pt-24 pb-16 px-6 md:px-10">
         {/* Team Cards Grid */}
-        <div className="flex flex-wrap justify-center gap-16 md:gap-24">
+        <div className="flex flex-wrap justify-center gap-y-16 md:gap-y-24 gap-x-20 md:gap-x-36 lg:gap-x-48">
           {teamMembers.map((member) => (
             <Link
               to={`/team/${member.slug}`}
@@ -24,10 +24,10 @@ export default function Team() {
                 className="aspect-[1/1.1] flex flex-col justify-end p-8 relative"
                 style={{ backgroundColor: member.color }}
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-[#00A868] uppercase tracking-wide">
+                <h3 className="text-4xl md:text-5xl font-bold text-[#00A868] uppercase tracking-wide">
                   {member.name}
                 </h3>
-                <p className="text-base md:text-lg mt-3 text-[#00A868] leading-relaxed max-w-[450px]">
+                <p className="text-lg md:text-xl mt-4 text-[#00A868] leading-relaxed max-w-[380px]">
                   {member.desc}
                 </p>
               </div>

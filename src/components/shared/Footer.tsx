@@ -9,7 +9,7 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
           {/* Left group - Logo + Address */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
             <div>
-              <Link to="/" className="text-2xl md:text-3xl font-bold tracking-tight" style={{ color: '#1A1A1A' }}>
+              <Link to="/" className="text-2xl md:text-3xl font-normal tracking-tight" style={{ color: '#1A1A1A' }}>
                 BRIDG
               </Link>
             </div>

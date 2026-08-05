@@ -21,10 +21,10 @@ export default function Invest() {
 
   return (
     <PageLayout>
-      <div className="pt-8 pb-16 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 lg:gap-x-36 gap-y-10 items-start">
+      <div className="pt-20 md:pt-24 pb-16 px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-48 gap-y-10 items-start">
           {/* Left: copy */}
-          <div>
+          <div className="max-w-md">
             <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#00A868' }}>
               Become a Partner
             </h1>
@@ -42,7 +42,7 @@ export default function Invest() {
           </div>
 
           {/* Right: contact box */}
-          <form onSubmit={handleSubmit} className="border-2 border-[#BBBBBB] rounded-lg p-8 md:p-10">
+          <form onSubmit={handleSubmit} className="border-2 border-[#BBBBBB] rounded-lg p-8 md:p-10 w-full max-w-[460px] md:ml-auto">
             <h2 className="text-xl md:text-2xl text-center uppercase tracking-wide text-[#666] mb-8">
               Partner With BRIDG
             </h2>

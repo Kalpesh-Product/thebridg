@@ -14,7 +14,7 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
               </Link>
             </div>
 
-            <div className="font-serif text-sm md:ml-6" style={{ color: '#1A1A1A' }}>
+            <div className="font-serif text-base md:text-lg md:ml-16" style={{ color: '#1A1A1A' }}>
               <p className="font-semibold">BRIDG</p>
               <p className="mt-1">BIZ Nest Co-Working, Sunteck Kanika Park,</p>
               <p>Panjim, Goa - India 403001</p>
@@ -24,13 +24,13 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
 
           {/* Right group - Links */}
           <div className="flex gap-8 md:gap-12 md:mr-10 lg:mr-16">
-            <div className="flex flex-col gap-2 text-sm">
-              <span className="font-serif font-semibold uppercase tracking-wider cursor-default">ABOUT</span>
+            <div className="flex flex-col gap-2 text-sm md:text-base">
+              <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">ABOUT</Link>
               <Link to="/careers" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">CAREER</Link>
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">FAQS</Link>
             </div>
 
-            <div className="flex flex-col gap-2 text-sm">
+            <div className="flex flex-col gap-2 text-sm md:text-base">
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">PRIVACY</Link>
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">T&C</Link>
               <Link to="#" className="hover:opacity-70 transition-opacity font-serif font-semibold uppercase tracking-wider">CONTACT</Link>

@@ -127,12 +127,20 @@ export default function Connect() {
                 value={formData.fullName}
                 onChange={(e) => updateField('fullName', e.target.value)}
               />
-              <input
-                type="text"
+              <LiquidSelect
                 placeholder="Country"
-                className="form-input-underline"
                 value={formData.country}
-                onChange={(e) => updateField('country', e.target.value)}
+                onChange={(v) => updateField('country', v)}
+                options={[
+                  { value: 'india', label: 'India' },
+                  { value: 'usa', label: 'USA' },
+                  { value: 'uk', label: 'UK' },
+                  { value: 'uae', label: 'UAE' },
+                  { value: 'canada', label: 'Canada' },
+                  { value: 'australia', label: 'Australia' },
+                  { value: 'germany', label: 'Germany' },
+                  { value: 'singapore', label: 'Singapore' },
+                ]}
               />
               <input
                 type="email"

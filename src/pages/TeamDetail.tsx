@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { useParams } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
+import LiquidSelect from '../components/shared/LiquidSelect';
 
 const teamData: Record<string, {
   name: string;
@@ -41,6 +43,8 @@ const teamData: Record<string, {
 export default function TeamDetail() {
   const { slug } = useParams<{ slug: string }>();
   const member = teamData[slug || ''] || teamData['kabir'];
+  const [country, setCountry] = useState('');
+  const [city, setCity] = useState('');
 
   return (
     <PageLayout>
@@ -99,8 +103,36 @@ export default function TeamDetail() {
               <input type="text" placeholder="Full Name" className="form-input-underline" />
               <input type="email" placeholder="Email" className="form-input-underline" />
               <input type="tel" placeholder="Phone Number" className="form-input-underline" />
-              <input type="text" placeholder="Country" className="form-input-underline" />
-              <input type="text" placeholder="City" className="form-input-underline" />
+              <LiquidSelect
+                placeholder="Country"
+                value={country}
+                onChange={setCountry}
+                options={[
+                  { value: 'india', label: 'India' },
+                  { value: 'usa', label: 'USA' },
+                  { value: 'uk', label: 'UK' },
+                  { value: 'uae', label: 'UAE' },
+                  { value: 'canada', label: 'Canada' },
+                  { value: 'australia', label: 'Australia' },
+                  { value: 'germany', label: 'Germany' },
+                  { value: 'singapore', label: 'Singapore' },
+                ]}
+              />
+              <LiquidSelect
+                placeholder="City"
+                value={city}
+                onChange={setCity}
+                options={[
+                  { value: 'mumbai', label: 'Mumbai' },
+                  { value: 'bangalore', label: 'Bangalore' },
+                  { value: 'delhi', label: 'Delhi' },
+                  { value: 'panjim', label: 'Panjim' },
+                  { value: 'dubai', label: 'Dubai' },
+                  { value: 'london', label: 'London' },
+                  { value: 'new-york', label: 'New York' },
+                  { value: 'singapore', label: 'Singapore' },
+                ]}
+              />
               <input type="text" placeholder="A Brief Message" className="form-input-underline" />
             </div>
             <div className="flex justify-center pt-10">

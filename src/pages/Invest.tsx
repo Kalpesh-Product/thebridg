@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { X, Check } from 'lucide-react';
 import PageLayout from '../components/shared/PageLayout';
 
 const pillInput = 'w-full px-6 py-4 bg-transparent border-2 border-[#BBBBBB] rounded-full text-sm outline-none transition-colors placeholder:text-[#1A1A1A] placeholder:font-medium focus:border-[#00A868]';
@@ -10,6 +11,7 @@ export default function Invest() {
     mobileNumber: '',
     message: '',
   });
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const updateField = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -17,6 +19,7 @@ export default function Invest() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setShowSuccess(true);
   };
 
   return (
@@ -28,7 +31,7 @@ export default function Invest() {
             <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#00A868' }}>
               Become a Partner
             </h1>
-            <div className="w-24 md:w-32 h-1 mb-8" style={{ backgroundColor: '#00A868' }} />
+            <div className="w-24 md:w-56 h-1 mb-8" style={{ backgroundColor: '#00A868' }} />
 
             <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: '#1A1A1A' }}>
               BRIDG is the world&apos;s first student led venture building platform, connecting students, startups, investors, universities, and industry leaders through one integrated ecosystem.
@@ -83,6 +86,40 @@ export default function Invest() {
           </form>
         </div>
       </div>
+
+      {showSuccess && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
+          <div className="relative w-full max-w-md bg-white rounded-lg p-8 md:p-10 text-center">
+            <button
+              type="button"
+              onClick={() => setShowSuccess(false)}
+              className="absolute top-4 right-4 text-[#1A1A1A] hover:opacity-60 transition-opacity"
+              aria-label="Close"
+            >
+              <X size={22} />
+            </button>
+
+            <div
+              className="mx-auto mb-6 w-16 h-16 rounded-full border-2 flex items-center justify-center"
+              style={{ borderColor: '#00A868' }}
+            >
+              <Check size={28} style={{ color: '#00A868' }} strokeWidth={3} />
+            </div>
+
+            <h2 className="text-2xl font-bold mb-4">Success</h2>
+
+            <p className="text-base leading-relaxed mb-6" style={{ color: '#1A1A1A' }}>
+              Thank you for your interest in partnering with BRIDG. We have received your submission and our team will get in touch with you shortly.
+            </p>
+
+            <p className="text-base leading-relaxed">
+              Regards,
+              <br />
+              Team BRIDG
+            </p>
+          </div>
+        </div>
+      )}
     </PageLayout>
   );
 }

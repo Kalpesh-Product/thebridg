@@ -16,7 +16,7 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
 
             <div className="font-serif text-base md:text-lg md:ml-16" style={{ color: '#1A1A1A' }}>
               <p className="font-semibold">BRIDG</p>
-              <p className="mt-1">BIZ Nest Co-Working, Sunteck Kanika Park,</p>
+              <p className="mt-1">BIZ Nest Co-Working, Sunteck Kanaka Park,</p>
               <p>Panjim, Goa - India 403001</p>
               <p className="mt-2">response@bridg.com</p>
             </div>

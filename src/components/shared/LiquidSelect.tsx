@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Search } from 'lucide-react';
 
 interface Option {
   value: string;
@@ -11,10 +11,12 @@ interface LiquidSelectProps {
   onChange: (value: string) => void;
   options: Option[];
   placeholder: string;
+  triggerClassName?: string;
 }
 
-export default function LiquidSelect({ value, onChange, options, placeholder }: LiquidSelectProps) {
+export default function LiquidSelect({ value, onChange, options, placeholder, triggerClassName }: LiquidSelectProps) {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState('');
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,14 +29,22 @@ export default function LiquidSelect({ value, onChange, options, placeholder }: 
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    if (!open) setQuery('');
+  }, [open]);
+
   const selected = options.find((o) => o.value === value);
+  const searchable = options.length > 8;
+  const filteredOptions = searchable
+    ? options.filter((o) => o.label.toLowerCase().includes(query.toLowerCase()))
+    : options;
 
   return (
     <div ref={ref} className="relative w-full">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="form-input-underline flex items-center justify-between gap-2 cursor-pointer text-left"
+        className={`${triggerClassName ?? 'form-input-underline'} flex items-center justify-between gap-2 cursor-pointer text-left`}
       >
         <span className={selected ? '' : 'text-[#999]'}>
           {selected ? selected.label : placeholder}
@@ -66,20 +76,38 @@ export default function LiquidSelect({ value, onChange, options, placeholder }: 
                 'linear-gradient(115deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 32%, rgba(255,255,255,0) 68%, rgba(255,255,255,0.25) 100%)',
             }}
           />
-          <div className="relative py-2 max-h-60 overflow-y-auto">
-            {options.map((opt) => (
-              <button
-                key={opt.value}
-                type="button"
-                onClick={() => {
-                  onChange(opt.value);
-                  setOpen(false);
-                }}
-                className="block w-full text-left px-4 py-2 text-sm text-[#1A1A1A] hover:bg-white/50 transition-colors"
-              >
-                {opt.label}
-              </button>
-            ))}
+          <div className="relative">
+            {searchable && (
+              <div className="flex items-center gap-2 px-4 py-2 border-b border-white/50">
+                <Search size={14} className="shrink-0 text-[#666]" />
+                <input
+                  type="text"
+                  autoFocus
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search..."
+                  className="w-full bg-transparent text-sm text-[#1A1A1A] outline-none placeholder:text-[#999]"
+                />
+              </div>
+            )}
+            <div className="py-2 max-h-60 overflow-y-auto">
+              {filteredOptions.length === 0 && (
+                <p className="px-4 py-2 text-sm text-[#999]">No results</p>
+              )}
+              {filteredOptions.map((opt) => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  onClick={() => {
+                    onChange(opt.value);
+                    setOpen(false);
+                  }}
+                  className="block w-full text-left px-4 py-2 text-sm text-[#1A1A1A] hover:bg-white/50 transition-colors"
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}

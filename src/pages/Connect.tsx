@@ -3,11 +3,13 @@ import { Link } from 'react-router';
 import { SiGmail } from 'react-icons/si';
 import PageLayout from '../components/shared/PageLayout';
 import LiquidSelect from '../components/shared/LiquidSelect';
+import { DIAL_CODE_OPTIONS } from '../data/countryCodes';
 
 type Step = 1 | 2 | 3 | 4;
 
 export default function Connect() {
   const [step, setStep] = useState<Step>(1);
+  const [step1Error, setStep1Error] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,6 +19,7 @@ export default function Connect() {
     fullName: '',
     country: '',
     email: '',
+    mobileCountryCode: '',
     mobileNumber: '',
     linkedin: '',
     companyName: '',
@@ -122,7 +125,7 @@ export default function Connect() {
               />
               <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="Full Name *"
                 className="form-input-underline"
                 value={formData.fullName}
                 onChange={(e) => updateField('fullName', e.target.value)}
@@ -144,18 +147,28 @@ export default function Connect() {
               />
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="Email *"
                 className="form-input-underline"
                 value={formData.email}
                 onChange={(e) => updateField('email', e.target.value)}
               />
-              <input
-                type="tel"
-                placeholder="Mobile Number"
-                className="form-input-underline"
-                value={formData.mobileNumber}
-                onChange={(e) => updateField('mobileNumber', e.target.value)}
-              />
+              <div className="flex gap-3">
+                <div className="w-24 shrink-0">
+                  <LiquidSelect
+                    placeholder="Code"
+                    value={formData.mobileCountryCode}
+                    onChange={(v) => updateField('mobileCountryCode', v)}
+                    options={DIAL_CODE_OPTIONS}
+                  />
+                </div>
+                <input
+                  type="tel"
+                  placeholder="Mobile Number *"
+                  className="form-input-underline flex-1 min-w-0"
+                  value={formData.mobileNumber}
+                  onChange={(e) => updateField('mobileNumber', e.target.value)}
+                />
+              </div>
               <input
                 type="text"
                 placeholder="LinkedIn Profile"
@@ -165,8 +178,22 @@ export default function Connect() {
               />
             </div>
 
+            {step1Error && (
+              <p className="text-center text-red-500 text-sm mt-6">{step1Error}</p>
+            )}
             <div className="flex justify-center pt-14 md:pt-20">
-              <button onClick={() => setStep(2)} className="yellow-btn">Next</button>
+              <button
+                onClick={() => {
+                  if (!formData.fullName.trim()) return setStep1Error('Full Name is required.');
+                  if (!formData.email.trim()) return setStep1Error('Email is required.');
+                  if (!formData.mobileNumber.trim()) return setStep1Error('Mobile Number is required.');
+                  setStep1Error(null);
+                  setStep(2);
+                }}
+                className="yellow-btn"
+              >
+                Next
+              </button>
             </div>
           </div>
         )}

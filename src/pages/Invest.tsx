@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { X, Check } from 'lucide-react';
 import PageLayout from '../components/shared/PageLayout';
+import LiquidSelect from '../components/shared/LiquidSelect';
+import { DIAL_CODE_OPTIONS } from '../data/countryCodes';
 
 const pillInput = 'w-full px-6 py-4 bg-transparent border-2 border-[#BBBBBB] rounded-full text-sm outline-none transition-colors placeholder:text-[#1A1A1A] placeholder:font-medium focus:border-[#00A868]';
 
@@ -8,6 +10,7 @@ export default function Invest() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    mobileCountryCode: '',
     mobileNumber: '',
     message: '',
   });
@@ -65,13 +68,24 @@ export default function Invest() {
                 value={formData.email}
                 onChange={(e) => updateField('email', e.target.value)}
               />
-              <input
-                type="tel"
-                placeholder="Mobile Number"
-                className={pillInput}
-                value={formData.mobileNumber}
-                onChange={(e) => updateField('mobileNumber', e.target.value)}
-              />
+              <div className="flex gap-3">
+                <div className="w-28 shrink-0">
+                  <LiquidSelect
+                    placeholder="Code"
+                    value={formData.mobileCountryCode}
+                    onChange={(v) => updateField('mobileCountryCode', v)}
+                    options={DIAL_CODE_OPTIONS}
+                    triggerClassName={pillInput}
+                  />
+                </div>
+                <input
+                  type="tel"
+                  placeholder="Mobile Number"
+                  className={`${pillInput} flex-1 min-w-0`}
+                  value={formData.mobileNumber}
+                  onChange={(e) => updateField('mobileNumber', e.target.value)}
+                />
+              </div>
               <textarea
                 placeholder="Message"
                 className="w-full px-6 py-4 bg-transparent border-2 border-[#BBBBBB] rounded-lg text-sm outline-none transition-colors resize-none h-32 placeholder:text-[#1A1A1A] placeholder:font-medium focus:border-[#00A868]"

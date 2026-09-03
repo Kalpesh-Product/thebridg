@@ -11,7 +11,7 @@ export default function Home() {
 
         {/* Tagline */}
         <img
-          src="/assets/Main%20BRIDG%20Banner%20Quotes.png"
+          src="/assets/Main_BRIDG_Banner.png"
           alt="a BRIDG for Unbacked Founders to become LEGENDARY."
           className="w-auto max-w-2xl md:max-w-3xl mb-8"
         />

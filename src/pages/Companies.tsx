@@ -14,9 +14,9 @@ const companies = [
 export default function Companies() {
   return (
     <PageLayout noFooterGap>
-      <div className="pt-8 pb-0 px-6 md:px-10">
+      <div>
         {/* View Toggle */}
-        <div className="flex gap-8 mb-16">
+        <div className="flex gap-8 mb-16 pt-8 pb-0 px-6 md:px-10">
           <span className="text-sm font-medium uppercase tracking-wider relative">
             GRID VIEW
             <svg className="absolute -bottom-1 left-0 w-full" style={{ height: '4px' }} viewBox="0 0 60 4" fill="none" preserveAspectRatio="none">
@@ -36,23 +36,20 @@ export default function Companies() {
               key={company.slug}
               className="group block"
             >
-              {/* Full-bleed photo/color banner, ignores the page's side padding */}
-              <div className="relative left-1/2 -translate-x-1/2 w-screen">
-                <div
-                  className="w-full h-[420px] md:h-[560px] flex items-start p-6 md:p-10 relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ backgroundColor: company.color }}
-                >
-                  {company.image && (
-                    <img
-                      src={company.image}
-                      alt={company.name}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  )}
-                  <h3 className="relative z-10 text-3xl md:text-5xl font-bold text-[#1A1A1A] uppercase tracking-wide">
-                    {company.name}
-                  </h3>
-                </div>
+              <div
+                className="w-full h-[420px] md:h-[560px] flex items-start p-6 md:p-10 relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
+                style={{ backgroundColor: company.color }}
+              >
+                {company.image && (
+                  <img
+                    src={company.image}
+                    alt={company.name}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
+                <h3 className="relative z-10 text-3xl md:text-5xl font-bold text-[#1A1A1A] uppercase tracking-wide">
+                  {company.name}
+                </h3>
               </div>
 
               {/* Meta row: description | divider | status, with a rule below */}

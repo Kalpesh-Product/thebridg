@@ -4,8 +4,6 @@ import PageLayout from '../components/shared/PageLayout';
 import LiquidSelect from '../components/shared/LiquidSelect';
 import { DIAL_CODE_OPTIONS } from '../data/countryCodes';
 
-const pillInput = 'w-full px-6 py-4 bg-transparent border-2 border-[#BBBBBB] rounded-full text-sm outline-none transition-colors placeholder:text-[#1A1A1A] placeholder:font-medium focus:border-[#00A868]';
-
 export default function Invest() {
   const [formData, setFormData] = useState({
     name: '',
@@ -28,7 +26,7 @@ export default function Invest() {
   return (
     <PageLayout>
       <div className="pt-20 md:pt-24 pb-16 px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-48 gap-y-10 items-start">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10 items-center justify-items-center">
           {/* Left: copy */}
           <div className="max-w-md">
             <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#00A868' }}>
@@ -48,7 +46,7 @@ export default function Invest() {
           </div>
 
           {/* Right: contact box */}
-          <form onSubmit={handleSubmit} className="border-2 border-[#BBBBBB] rounded-lg p-8 md:p-10 w-full max-w-[460px] md:ml-auto">
+          <form onSubmit={handleSubmit} className="border-2 border-[#BBBBBB] rounded-lg p-8 md:p-10 w-full max-w-[460px]">
             <h2 className="text-xl md:text-2xl text-center uppercase tracking-wide text-[#666] mb-8">
               Partner With BRIDG
             </h2>
@@ -57,14 +55,14 @@ export default function Invest() {
               <input
                 type="text"
                 placeholder="Name"
-                className={pillInput}
+                className="form-input-underline"
                 value={formData.name}
                 onChange={(e) => updateField('name', e.target.value)}
               />
               <input
                 type="email"
                 placeholder="Email"
-                className={pillInput}
+                className="form-input-underline"
                 value={formData.email}
                 onChange={(e) => updateField('email', e.target.value)}
               />
@@ -75,20 +73,19 @@ export default function Invest() {
                     value={formData.mobileCountryCode}
                     onChange={(v) => updateField('mobileCountryCode', v)}
                     options={DIAL_CODE_OPTIONS}
-                    triggerClassName={pillInput}
                   />
                 </div>
                 <input
                   type="tel"
                   placeholder="Mobile Number"
-                  className={`${pillInput} flex-1 min-w-0`}
+                  className="form-input-underline flex-1 min-w-0"
                   value={formData.mobileNumber}
                   onChange={(e) => updateField('mobileNumber', e.target.value)}
                 />
               </div>
               <textarea
                 placeholder="Message"
-                className="w-full px-6 py-4 bg-transparent border-2 border-[#BBBBBB] rounded-lg text-sm outline-none transition-colors resize-none h-32 placeholder:text-[#1A1A1A] placeholder:font-medium focus:border-[#00A868]"
+                className="form-input-underline resize-none h-12"
                 value={formData.message}
                 onChange={(e) => updateField('message', e.target.value)}
               />

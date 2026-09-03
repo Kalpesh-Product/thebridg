@@ -136,6 +136,16 @@ export default function CompanyDetail() {
               CONNECT WITH {company.name}!
             </h3>
             <div className="grid grid-cols-2 gap-x-10 gap-y-6">
+              <LiquidSelect
+                placeholder="Partnership type"
+                value={partnershipType}
+                onChange={setPartnershipType}
+                options={[
+                  { value: 'investment', label: 'Investment' },
+                  { value: 'partnership', label: 'Partnership' },
+                  { value: 'collaboration', label: 'Collaboration' },
+                ]}
+              />
               <input type="text" placeholder="Full Name" className="form-input-underline" />
               <input type="email" placeholder="Email" className="form-input-underline" />
               <input type="tel" placeholder="Phone Number" className="form-input-underline" />
@@ -167,16 +177,6 @@ export default function CompanyDetail() {
                   { value: 'london', label: 'London' },
                   { value: 'new-york', label: 'New York' },
                   { value: 'singapore', label: 'Singapore' },
-                ]}
-              />
-              <LiquidSelect
-                placeholder="Partnership type"
-                value={partnershipType}
-                onChange={setPartnershipType}
-                options={[
-                  { value: 'investment', label: 'Investment' },
-                  { value: 'partnership', label: 'Partnership' },
-                  { value: 'collaboration', label: 'Collaboration' },
                 ]}
               />
             </div>

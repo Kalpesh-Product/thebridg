@@ -14,9 +14,9 @@ const companies = [
 export default function CompaniesList() {
   return (
     <PageLayout>
-      <div className="pt-8 pb-16 px-6 md:px-10">
+      <div className="pb-16">
         {/* View Toggle */}
-        <div className="flex gap-8 mb-8">
+        <div className="flex gap-8 mb-8 pt-8 pb-0 px-6 md:px-10">
           <Link to="/companies" className="text-sm font-medium uppercase tracking-wider text-[#666] hover:text-[#1A1A1A] transition-colors">
             GRID VIEW
           </Link>
@@ -40,7 +40,7 @@ export default function CompaniesList() {
           <Link
             to={`/company/${company.slug}`}
             key={company.slug}
-            className="grid grid-cols-3 gap-4 py-8 border-b-2 border-[#1A1A1A] items-center text-center hover:bg-black/5 transition-colors -mx-4 px-4"
+            className="grid grid-cols-3 gap-4 py-8 border-b-2 border-[#1A1A1A] items-center text-center hover:bg-black/5 transition-colors"
           >
             <span className="text-base font-normal uppercase">{company.name}</span>
             <span className="text-xs text-[#1A1A1A]">{company.desc}</span>

@@ -10,6 +10,7 @@ import Concepts from './pages/Concepts';
 import Connect from './pages/Connect';
 import Invest from './pages/Invest';
 import Careers from './pages/Careers';
+import JobDetail from './pages/JobDetail';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <Route path="/connect" element={<Connect />} />
       <Route path="/invest" element={<Invest />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/careers/:slug" element={<JobDetail />} />
       </Routes>
     </>
   );

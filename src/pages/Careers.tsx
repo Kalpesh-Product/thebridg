@@ -1,11 +1,12 @@
+import { Link } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
 
 const positions = [
-  'Chief Operating Officer',
-  'Analyst',
-  'Marketing Executive',
-  'Administration Manager',
-  'Business Development Manager',
+  { slug: 'chief-operating-officer', title: 'Chief Operating Officer' },
+  { slug: 'analyst', title: 'Analyst' },
+  { slug: 'marketing-executive', title: 'Marketing Executive' },
+  { slug: 'administration-manager', title: 'Administration Manager' },
+  { slug: 'business-development-manager', title: 'Business Development Manager' },
 ];
 
 export default function Careers() {
@@ -24,14 +25,15 @@ export default function Careers() {
 
         {/* Positions List */}
         <div className="space-y-4">
-          {positions.map((position, index) => (
-            <div
-              key={index}
+          {positions.map((position) => (
+            <Link
+              to={`/careers/${position.slug}`}
+              key={position.slug}
               className="flex items-center justify-between py-6 border-b-2 border-[#1A1A1A] hover:bg-black/5 transition-colors -mx-4 px-4"
             >
-              <span className="text-base font-normal">{position}</span>
+              <span className="text-base font-normal">{position.title}</span>
               <button className="outline-btn">APPLY</button>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

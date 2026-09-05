@@ -11,6 +11,11 @@ import Connect from './pages/Connect';
 import Invest from './pages/Invest';
 import Careers from './pages/Careers';
 import JobDetail from './pages/JobDetail';
+import About from './pages/About';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 
 export default function App() {
   return (
@@ -28,6 +33,11 @@ export default function App() {
       <Route path="/invest" element={<Invest />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/careers/:slug" element={<JobDetail />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
     </>
   );

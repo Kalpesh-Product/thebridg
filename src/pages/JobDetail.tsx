@@ -157,7 +157,7 @@ export default function JobDetail() {
 
   return (
     <PageLayout>
-      <div className="pt-8 pb-16 max-w-4xl mx-auto">
+      <div className="pt-8 pb-16 max-w-5xl mx-auto">
         <Link to="/careers" className="text-sm font-medium mb-6 block" style={{ color: '#1A73E8' }}>
           &larr; Back to open positions
         </Link>

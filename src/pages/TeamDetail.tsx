@@ -49,7 +49,7 @@ export default function TeamDetail() {
   return (
     <PageLayout>
       <div className="pt-20 md:pt-24 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10 lg:items-center mb-10">
           {/* Row 1, Col 1 - Name/Bio */}
           <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 -mt-6 md:-mt-10" style={{ color: '#00A868' }}>
@@ -79,13 +79,15 @@ export default function TeamDetail() {
 
           {/* Row 1, Col 2 - Photo */}
           <div
-            className="w-full max-w-[460px] mx-auto mt-4 aspect-square rounded-lg bg-cover bg-center"
+            className="w-full max-w-[460px] mx-auto aspect-square rounded-lg bg-cover bg-center"
             style={{ backgroundColor: member.color, backgroundImage: 'url(/assets/836.jpg)' }}
           />
+        </div>
 
-          {/* Divider */}
-          <div className="col-span-full border-t-2 border-[#BBBBBB]" />
+        {/* Divider */}
+        <div className="border-t-2 border-[#BBBBBB]" />
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-10">
           {/* Row 2, Col 1 - Personal Hobbies */}
           <div className="pt-12">
             <h3 className="text-3xl font-bold uppercase tracking-wider mb-10">PERSONAL HOBBIES!</h3>

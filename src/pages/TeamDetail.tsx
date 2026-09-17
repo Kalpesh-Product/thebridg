@@ -77,10 +77,10 @@ export default function TeamDetail() {
             </div>
           </div>
 
-          {/* Row 1, Col 2 - Color Card */}
+          {/* Row 1, Col 2 - Photo */}
           <div
-            className="w-full max-w-[460px] mx-auto mt-4 aspect-square rounded-lg"
-            style={{ backgroundColor: member.color }}
+            className="w-full max-w-[460px] mx-auto mt-4 aspect-square rounded-lg bg-cover bg-center"
+            style={{ backgroundColor: member.color, backgroundImage: 'url(/assets/836.jpg)' }}
           />
 
           {/* Divider */}

@@ -5,10 +5,10 @@ const companies = [
   { slug: 'studom', name: 'STUDOM', color: '#784840', image: '/assets/Studom.jpeg', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
   { slug: 'unistyle', name: 'UNISTYLE', color: '#707070', image: '/assets/UniStyle.jpeg', desc: 'UniStyle creates premium university merchandise and school uniforms. Specialising in custom uniforms, apparel and merchandise, the company delivers high quality products for schools and universities.' },
   { slug: 'daily-daily', name: 'DAILY DAILY', color: '#505050', image: '/assets/Daily%20Daily.jpeg', desc: 'Daily Daily delivers daily essentials through simple subscriptions. The platform provides scheduled doorstep delivery of groceries, household essentials, and everyday products through flexible subscription plans.' },
-  { slug: 'stintern', name: 'STINTERN', color: '#780048', desc: 'Stintern helps students discover and apply for internships in one place.' },
-  { slug: 'flagit', name: 'FLAGIT', color: '#784840', desc: 'Flagit lets people report road and traffic violations in a simple, responsible way.' },
-  { slug: 'datamatic', name: 'DATAMATIC', color: '#780048', desc: 'Datamatic helps businesses discover and access structured company information in one place.' },
-  { slug: 'allperspectives', name: 'ALLPERSPECTIVES', color: '#707070', desc: 'Allperspectives explores the different perspectives people experience in everyday relationships.' },
+  { slug: 'stintern', name: 'STINTERN', color: '#780048', image: '/assets/Studom.jpeg', desc: 'Stintern helps students discover and apply for internships in one place.' },
+  { slug: 'flagit', name: 'FLAGIT', color: '#784840', image: '/assets/Studom.jpeg', desc: 'Flagit lets people report road and traffic violations in a simple, responsible way.' },
+  { slug: 'datamatic', name: 'DATAMATIC', color: '#780048', image: '/assets/Studom.jpeg', desc: 'Datamatic helps businesses discover and access structured company information in one place.' },
+  { slug: 'allperspectives', name: 'ALLPERSPECTIVES', color: '#707070', image: '/assets/Studom.jpeg', desc: 'Allperspectives explores the different perspectives people experience in everyday relationships.' },
 ];
 
 export default function Companies() {

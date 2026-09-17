@@ -36,13 +36,14 @@ export default function Team() {
               className="group block w-full md:w-[calc(50%-3rem)] max-w-[520px] rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1"
             >
               <div
-                className="aspect-[1/1.1] flex flex-col justify-end p-8 relative"
-                style={{ backgroundColor: member.color }}
+                className="aspect-[1/1.1] flex flex-col justify-end p-8 relative bg-cover bg-center"
+                style={{ backgroundColor: member.color, backgroundImage: 'url(/assets/836.jpg)' }}
               >
-                <h3 className="text-4xl md:text-5xl font-bold text-[#00A868] uppercase tracking-wide">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <h3 className="relative text-4xl md:text-5xl font-bold text-[#00A868] uppercase tracking-wide">
                   {member.name}
                 </h3>
-                <p className="text-lg md:text-xl mt-4 text-[#00A868] leading-relaxed max-w-[380px]">
+                <p className="relative text-lg md:text-xl mt-4 text-[#00A868] leading-relaxed max-w-[380px]">
                   {member.desc}
                 </p>
               </div>
@@ -68,13 +69,14 @@ export default function Team() {
               className="block w-full md:w-[calc(50%-3rem)] max-w-[520px] rounded-2xl overflow-hidden"
             >
               <div
-                className="aspect-[1/1.1] flex flex-col justify-end p-8 relative"
-                style={{ backgroundColor: advisor.color }}
+                className="aspect-[1/1.1] flex flex-col justify-end p-8 relative bg-cover bg-center"
+                style={{ backgroundColor: advisor.color, backgroundImage: 'url(/assets/836.jpg)' }}
               >
-                <h3 className="text-4xl md:text-5xl font-bold text-[#00A868] uppercase tracking-wide">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <h3 className="relative text-4xl md:text-5xl font-bold text-[#00A868] uppercase tracking-wide">
                   {advisor.name}
                 </h3>
-                <p className="text-lg md:text-xl mt-4 text-[#00A868] leading-relaxed max-w-[380px]">
+                <p className="relative text-lg md:text-xl mt-4 text-[#00A868] leading-relaxed max-w-[380px]">
                   {advisor.desc}
                 </p>
               </div>

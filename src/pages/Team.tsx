@@ -19,7 +19,14 @@ export default function Team() {
   return (
     <PageLayout>
       <div className="pt-8 md:pt-10 pb-16 px-6 md:px-10">
-        <h1 className="text-3xl md:text-4xl font-light text-center mb-8 md:mb-10 tracking-wider">CORE TEAM</h1>
+        <div className="text-center mb-8 md:mb-10">
+          <h1 className="relative inline-block text-3xl md:text-4xl font-light tracking-wider">
+            CORE TEAM
+            <svg className="absolute -bottom-2 left-0 w-full" style={{ height: '6px' }} viewBox="0 0 200 8" fill="none" preserveAspectRatio="none">
+              <path d="M2 4 Q30 2 60 4 Q90 6 120 3 Q150 1 180 4 Q190 5 198 4" stroke="#00A868" strokeWidth="5" strokeLinecap="round" fill="none" />
+            </svg>
+          </h1>
+        </div>
         {/* Team Cards Grid */}
         <div className="flex flex-wrap justify-center gap-y-16 md:gap-y-24 gap-x-20 md:gap-x-36 lg:gap-x-48">
           {teamMembers.map((member) => (
@@ -43,9 +50,16 @@ export default function Team() {
           ))}
         </div>
 
-        <hr className="border-t-2 border-[#BBBBBB] my-16 md:my-20" />
+        <hr className="border-t-2 border-[#BBBBBB] mt-16 md:mt-20 mb-8 md:mb-10" />
 
-        <h1 className="text-3xl md:text-4xl font-light text-center mb-8 md:mb-10 tracking-wider">OUR ADVISOR</h1>
+        <div className="text-center mb-8 md:mb-10">
+          <h1 className="relative inline-block text-3xl md:text-4xl font-light tracking-wider">
+            OUR ADVISOR
+            <svg className="absolute -bottom-2 left-0 w-full" style={{ height: '6px' }} viewBox="0 0 200 8" fill="none" preserveAspectRatio="none">
+              <path d="M2 4 Q30 2 60 4 Q90 6 120 3 Q150 1 180 4 Q190 5 198 4" stroke="#00A868" strokeWidth="5" strokeLinecap="round" fill="none" />
+            </svg>
+          </h1>
+        </div>
         {/* Advisor Cards Grid */}
         <div className="flex flex-wrap justify-center gap-y-16 md:gap-y-24 gap-x-20 md:gap-x-36 lg:gap-x-48">
           {advisors.map((advisor) => (

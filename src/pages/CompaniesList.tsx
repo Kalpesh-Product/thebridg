@@ -2,13 +2,18 @@ import { Link } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
 
 const companies = [
-  { slug: 'studom', name: 'STUDOM', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
+  { slug: 'studom', name: 'BIZNest', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
+  { slug: 'studom', name: 'WoNo', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
   { slug: 'unistyle', name: 'UNISTYLE', desc: 'UniStyle brings official school uniforms and university merchandise into one place.' },
-  { slug: 'daily-daily', name: 'DAILY DAILY', desc: 'Daily Daily helps people subscribe to and receive everyday essentials from local stores.' },
-  { slug: 'stintern', name: 'STINTERN', desc: 'Stintern helps students discover and apply for internships in one place.' },
-  { slug: 'flagit', name: 'FLAGIT', desc: 'Flagit lets people report road and traffic violations in a simple, responsible way.' },
-  { slug: 'datamatic', name: 'DATAMATIC', desc: 'Datamatic helps businesses discover and access structured company information in one place.' },
+  { slug: 'studom', name: 'STUDOM', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
   { slug: 'allperspectives', name: 'ALL PERSPECTIVES', desc: 'Allperspectives explores the different perspectives people experience in everyday relationships.' },
+  // { slug: 'daily-daily', name: 'DAILY DAILY', desc: 'Daily Daily helps people subscribe to and receive everyday essentials from local stores.' },
+  { slug: 'studom', name: 'BUBU', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
+  { slug: 'studom', name: 'REAL ESTATE', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
+  { slug: 'studom', name: 'CAR', desc: 'Studom helps students discover, compare, and apply to universities in one place.' },
+  // { slug: 'flagit', name: 'FLAGIT', desc: 'Flagit lets people report road and traffic violations in a simple, responsible way.' },
+  // { slug: 'datamatic', name: 'DATAMATIC', desc: 'Datamatic helps businesses discover and access structured company information in one place.' },
+  { slug: 'stintern', name: 'STINTERN', desc: 'Stintern helps students discover and apply for internships in one place.' },
 ];
 
 export default function CompaniesList() {

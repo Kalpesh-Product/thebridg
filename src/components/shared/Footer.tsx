@@ -16,8 +16,8 @@ export default function Footer({ noGap }: { noGap?: boolean }) {
           {/* Address - centered across the full footer width */}
           <div className="font-serif text-base md:text-lg md:absolute md:left-1/2 md:-translate-x-1/2" style={{ color: '#1A1A1A' }}>
             {/* <p className="font-semibold">BRIDG</p> */}
-            <p className="mt-1">BIZ Nest Co-Working, Sunteck Kanaka Park,</p>
-            <p>Panjim, Goa - India 403001</p>
+            <p className="mt-1">Nadd Hessa,  Dubai Silicon Oasis,</p>
+            <p>Dubai - United Arab Emirates</p>
             <p className="mt-2">response@bridg.com</p>
           </div>
 

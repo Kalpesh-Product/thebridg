@@ -46,7 +46,7 @@ export default function Invest() {
           </div>
 
           {/* Right: contact box */}
-          <form onSubmit={handleSubmit} className="border-2 border-[#BBBBBB] rounded-lg p-8 md:p-10 w-full max-w-[460px]">
+          <form onSubmit={handleSubmit} className="rounded-lg p-8 md:p-10 w-full max-w-[460px]">
             <h2 className="text-xl md:text-2xl text-center uppercase tracking-wide text-[#666] mb-8">
               Partner With BRIDG
             </h2>

@@ -239,7 +239,7 @@ export default function JobDetail() {
             </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto border border-[#1A1A1A] rounded-lg p-8">
+          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto rounded-lg p-8">
             <h3 className="block w-fit mx-auto text-xl font-bold uppercase tracking-wider mb-8 border-b-2 border-[#1A1A1A] pb-1">
               Apply for {job.title}
             </h3>

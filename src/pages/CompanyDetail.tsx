@@ -121,7 +121,7 @@ export default function CompanyDetail() {
           </div>
 
           {/* Row 2, Col 2 - Connect Form */}
-          <div className="border border-[#1A1A1A] rounded-lg p-8 mt-12">
+          <div className="rounded-lg p-8 mt-12">
             <h3 className="block w-fit mx-auto text-2xl font-bold uppercase tracking-wider mb-8 border-b-2 border-[#1A1A1A] pb-1">
               GET INTRODUCED TO {company.name}
             </h3>

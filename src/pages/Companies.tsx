@@ -2,10 +2,10 @@ import { Link } from 'react-router';
 import PageLayout from '../components/shared/PageLayout';
 
 const companies = [
-  { slug: 'studom', name: 'BIZNest', color: '#784840', image: '/assets/Studom.jpeg', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
-  { slug: 'studom', name: 'WoNo', color: '#784840', image: '/assets/Studom.jpeg', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
+  { slug: 'studom', name: 'BIZNest', color: '#784840', image: '/assets/BIZNest.png', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
+  { slug: 'studom', name: 'WoNo', color: '#784840', image: '/assets/WoNo.png', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
   { slug: 'unistyle', name: 'UNISTYLE', color: '#707070', image: '/assets/UniStyle.jpeg', desc: 'UniStyle creates premium university merchandise and school uniforms. Specialising in custom uniforms, apparel and merchandise, the company delivers high quality products for schools and universities.' },
-  { slug: 'studom', name: 'STUDOM', color: '#784840', image: '/assets/Studom.jpeg', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
+  { slug: 'studom', name: 'STUDOM', color: '#784840', image: '/assets/Studom.png', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
   // { slug: 'daily-daily', name: 'DAILY DAILY', color: '#505050', image: '/assets/Daily%20Daily.jpeg', desc: 'Daily Daily delivers daily essentials through simple subscriptions. The platform provides scheduled doorstep delivery of groceries, household essentials, and everyday products through flexible subscription plans.' },
   { slug: 'allperspectives', name: 'ALLPERSPECTIVES', color: '#707070', image: '/assets/Studom.jpeg', desc: 'Allperspectives explores the different perspectives people experience in everyday relationships.' },
   { slug: 'studom', name: 'BUBU', color: '#784840', image: '/assets/Studom.jpeg', desc: 'Studom helps students discover and choose the right universities and schools. The platform brings together institution information, tuition fees, rankings, admissions, and direct applications in one place.' },
@@ -49,7 +49,7 @@ export default function Companies() {
                   <img
                     src={company.image}
                     alt={company.name}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-fit"
                   />
                 )}
                 <h3 className="relative z-10 text-3xl md:text-5xl font-bold text-[#1A1A1A] uppercase tracking-wide">
